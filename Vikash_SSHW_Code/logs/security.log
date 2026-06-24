@@ -1,0 +1,1357 @@
+2026-06-13 15:00:46,529 [INFO] [STARTUP] SecureChat started — AES-256-GCM + HMAC-SHA256 + bcrypt ready
+2026-06-13 15:00:49,286 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-13 15:00:49,287 [INFO] [33mPress CTRL+C to quit[0m
+2026-06-13 15:00:49,288 [INFO]  * Restarting with stat
+2026-06-13 15:00:50,412 [INFO] [STARTUP] SecureChat started — AES-256-GCM + HMAC-SHA256 + bcrypt ready
+2026-06-13 15:00:50,434 [WARNING]  * Debugger is active!
+2026-06-13 15:00:50,450 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 15:01:08,327 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:08] "GET / HTTP/1.1" 200 -
+2026-06-13 15:01:08,364 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:08] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-13 15:01:08,364 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:08] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-06-13 15:01:08,430 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:08] "GET /socket.io/?EIO=4&transport=polling&t=Px14cFB HTTP/1.1" 200 -
+2026-06-13 15:01:08,538 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:08] "POST /socket.io/?EIO=4&transport=polling&t=Px14cGs&sid=W4kerH9yfMHFgTH0AAAA HTTP/1.1" 200 -
+2026-06-13 15:01:08,543 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:08] "GET /socket.io/?EIO=4&transport=polling&t=Px14cGt&sid=W4kerH9yfMHFgTH0AAAA HTTP/1.1" 200 -
+2026-06-13 15:01:08,549 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 15:01:08,551 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:08] "GET /socket.io/?EIO=4&transport=polling&t=Px14cH2&sid=W4kerH9yfMHFgTH0AAAA HTTP/1.1" 200 -
+2026-06-13 15:01:37,204 [INFO] [LOGIN_OK] User logged in: alice from 127.0.0.1
+2026-06-13 15:01:37,206 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:37] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:01:37,215 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:37] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:01:41,998 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:41] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:01:42,001 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:42] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:01:42,055 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:42] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:01:43,046 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:43] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:01:43,047 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:43] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:01:43,102 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:43] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:01:44,364 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:44] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:01:44,365 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:44] "GET /api/messages/dave HTTP/1.1" 200 -
+2026-06-13 15:01:44,418 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:44] "GET /api/crypto-info/dave HTTP/1.1" 200 -
+2026-06-13 15:01:45,680 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:45] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:01:45,681 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:45] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:01:45,735 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:45] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:01:50,672 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:WZvGMvIC…]
+2026-06-13 15:01:50,673 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:50] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:01:50,744 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:50] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:01:50,767 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:01:50,767 [INFO] 127.0.0.1 - - [13/Jun/2026 15:01:50] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:02:00,714 [WARNING] [MITM_ATTEMPT] MITM: intercepted and tampered ciphertext alice→bob
+2026-06-13 15:02:00,714 [INFO] [MITM_DETECTED] MITM detected and blocked: Replay attack detected — nonce already seen
+2026-06-13 15:02:00,715 [INFO] 127.0.0.1 - - [13/Jun/2026 15:02:00] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-13 15:02:11,630 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce 5f950dbe… alice→bob
+2026-06-13 15:02:11,630 [INFO] [REPLAY_DETECTED] Replay blocked: Replay attack detected — nonce '5f950dbe…' already seen
+2026-06-13 15:02:11,631 [INFO] 127.0.0.1 - - [13/Jun/2026 15:02:11] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 15:02:15,813 [INFO] 127.0.0.1 - - [13/Jun/2026 15:02:15] "GET /api/logs HTTP/1.1" 200 -
+2026-06-13 15:02:17,614 [INFO] 127.0.0.1 - - [13/Jun/2026 15:02:17] "GET /api/logs HTTP/1.1" 200 -
+2026-06-13 15:03:27,169 [INFO] 127.0.0.1 - - [13/Jun/2026 15:03:27] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:03:59,056 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:kmXwKo6b…]
+2026-06-13 15:03:59,057 [INFO] 127.0.0.1 - - [13/Jun/2026 15:03:59] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:03:59,062 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:03:59,130 [INFO] 127.0.0.1 - - [13/Jun/2026 15:03:59] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:03:59,153 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:03:59,154 [INFO] 127.0.0.1 - - [13/Jun/2026 15:03:59] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:04:09,784 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:wHcLvWpW…]
+2026-06-13 15:04:09,784 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:09] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:04:09,790 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:09,790 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:09,858 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:09] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:04:09,882 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:04:09,882 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:09] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:04:11,851 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:11] "GET / HTTP/1.1" 200 -
+2026-06-13 15:04:11,856 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:11] "GET /socket.io/?EIO=4&transport=websocket&sid=W4kerH9yfMHFgTH0AAAA HTTP/1.1" 200 -
+2026-06-13 15:04:11,879 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:04:11,888 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:04:11,910 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:11] "GET /socket.io/?EIO=4&transport=polling&t=Px15J20 HTTP/1.1" 200 -
+2026-06-13 15:04:11,928 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:11] "POST /socket.io/?EIO=4&transport=polling&t=Px15J2F&sid=LORqqr1rPBXpEj3GAAAC HTTP/1.1" 200 -
+2026-06-13 15:04:11,932 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:11] "GET /socket.io/?EIO=4&transport=polling&t=Px15J2F.0&sid=LORqqr1rPBXpEj3GAAAC HTTP/1.1" 200 -
+2026-06-13 15:04:11,943 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:11] "GET /socket.io/?EIO=4&transport=polling&t=Px15J2Y&sid=LORqqr1rPBXpEj3GAAAC HTTP/1.1" 200 -
+2026-06-13 15:04:17,700 [INFO] [LOGIN_OK] User logged in: alice from 127.0.0.1
+2026-06-13 15:04:17,700 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:17] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:04:17,707 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:17] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:04:20,880 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:20] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:04:20,881 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:20] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:04:20,916 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:20] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:04:25,710 [INFO] [MSG_ENCRYPTED] Message encrypted alice→carol [AES-256-GCM, IV:VgR9KaPs…]
+2026-06-13 15:04:25,710 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:25] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:04:25,784 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:25] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:04:25,808 [INFO] [MSG_DECRYPTED] Message decrypted alice→carol [HMAC ✓]
+2026-06-13 15:04:25,808 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:25] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:04:25,810 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:04:25,810 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:25] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:04:32,771 [INFO] [MSG_ENCRYPTED] Message encrypted alice→carol [AES-256-GCM, IV:R4U53/9/…]
+2026-06-13 15:04:32,772 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:32] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:04:32,777 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:04:32,815 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:32] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:04:32,839 [INFO] [MSG_DECRYPTED] Message decrypted alice→carol [HMAC ✓]
+2026-06-13 15:04:32,839 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:32] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:04:32,841 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:04:32,841 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:04:32,842 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:32] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:04:34,563 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:34] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:04:34,564 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:34,565 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:34,565 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:34,565 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:34] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:04:34,619 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:34] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:04:37,851 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:v20+GZWU…]
+2026-06-13 15:04:37,852 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:37] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:04:37,857 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:37,858 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:37,858 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:37,899 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:37] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:04:37,923 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:04:37,923 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:37] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:04:37,926 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:37,926 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:37,926 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:37,926 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:04:37,926 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:37] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:04:39,432 [INFO] [LOGOUT] User logged out: alice
+2026-06-13 15:04:39,432 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:39] "POST /api/logout HTTP/1.1" 200 -
+2026-06-13 15:04:41,830 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:41] "GET / HTTP/1.1" 200 -
+2026-06-13 15:04:41,842 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:41] "GET /socket.io/?EIO=4&transport=websocket&sid=LORqqr1rPBXpEj3GAAAC HTTP/1.1" 200 -
+2026-06-13 15:04:41,862 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:04:41,864 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:04:41,896 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:41] "GET /socket.io/?EIO=4&transport=polling&t=Px15QMV HTTP/1.1" 200 -
+2026-06-13 15:04:41,906 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:41] "POST /socket.io/?EIO=4&transport=polling&t=Px15QMm&sid=VQBBDu8GBzAJyqWZAAAE HTTP/1.1" 200 -
+2026-06-13 15:04:41,908 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:41] "GET /socket.io/?EIO=4&transport=polling&t=Px15QMm.0&sid=VQBBDu8GBzAJyqWZAAAE HTTP/1.1" 200 -
+2026-06-13 15:04:44,158 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:44] "GET / HTTP/1.1" 200 -
+2026-06-13 15:04:44,163 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:44] "GET /socket.io/?EIO=4&transport=websocket&sid=VQBBDu8GBzAJyqWZAAAE HTTP/1.1" 200 -
+2026-06-13 15:04:44,179 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:04:44,180 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:04:44,189 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:44] "GET /socket.io/?EIO=4&transport=polling&t=Px15QwQ HTTP/1.1" 200 -
+2026-06-13 15:04:44,217 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:44] "POST /socket.io/?EIO=4&transport=polling&t=Px15Qwq&sid=0O6vNwAKhpruOjV0AAAG HTTP/1.1" 200 -
+2026-06-13 15:04:44,219 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:44] "GET /socket.io/?EIO=4&transport=polling&t=Px15Qwr&sid=0O6vNwAKhpruOjV0AAAG HTTP/1.1" 200 -
+2026-06-13 15:04:44,225 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:44] "GET /socket.io/?EIO=4&transport=polling&t=Px15Qw-&sid=0O6vNwAKhpruOjV0AAAG HTTP/1.1" 200 -
+2026-06-13 15:04:45,174 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:45] "GET /socket.io/?EIO=4&transport=websocket&sid=0O6vNwAKhpruOjV0AAAG HTTP/1.1" 200 -
+2026-06-13 15:04:50,458 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:50] "GET / HTTP/1.1" 200 -
+2026-06-13 15:04:50,530 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:04:50,533 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:04:50,542 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:50] "GET /socket.io/?EIO=4&transport=polling&t=Px15STh HTTP/1.1" 200 -
+2026-06-13 15:04:50,576 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:50] "POST /socket.io/?EIO=4&transport=polling&t=Px15SUD&sid=xCKfMax5z4DaEcY1AAAI HTTP/1.1" 200 -
+2026-06-13 15:04:50,581 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:50] "GET /socket.io/?EIO=4&transport=polling&t=Px15SUD.0&sid=xCKfMax5z4DaEcY1AAAI HTTP/1.1" 200 -
+2026-06-13 15:04:50,591 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:50] "GET /socket.io/?EIO=4&transport=polling&t=Px15SUT&sid=xCKfMax5z4DaEcY1AAAI HTTP/1.1" 200 -
+2026-06-13 15:04:51,978 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:51] "GET /socket.io/?EIO=4&transport=websocket&sid=xCKfMax5z4DaEcY1AAAI HTTP/1.1" 200 -
+2026-06-13 15:04:55,008 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:55] "GET / HTTP/1.1" 200 -
+2026-06-13 15:04:55,085 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:04:55,087 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:04:55,118 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:55] "GET /socket.io/?EIO=4&transport=polling&t=Px15TbB HTTP/1.1" 200 -
+2026-06-13 15:04:55,124 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:55] "POST /socket.io/?EIO=4&transport=polling&t=Px15TbH&sid=98kT8ETARU_E6BR6AAAK HTTP/1.1" 200 -
+2026-06-13 15:04:55,128 [INFO] 127.0.0.1 - - [13/Jun/2026 15:04:55] "GET /socket.io/?EIO=4&transport=polling&t=Px15TbH.0&sid=98kT8ETARU_E6BR6AAAK HTTP/1.1" 200 -
+2026-06-13 15:07:13,138 [INFO] 127.0.0.1 - - [13/Jun/2026 15:07:13] "GET /socket.io/?EIO=4&transport=websocket&sid=98kT8ETARU_E6BR6AAAK HTTP/1.1" 200 -
+2026-06-13 15:07:14,800 [INFO] 127.0.0.1 - - [13/Jun/2026 15:07:14] "GET /socket.io/?EIO=4&transport=polling&t=Px15_hb HTTP/1.1" 200 -
+2026-06-13 15:07:14,809 [INFO] 127.0.0.1 - - [13/Jun/2026 15:07:14] "POST /socket.io/?EIO=4&transport=polling&t=Px15_hp&sid=Kc206xnbvz0JVCEgAAAM HTTP/1.1" 200 -
+2026-06-13 15:07:14,810 [INFO] 127.0.0.1 - - [13/Jun/2026 15:07:14] "GET /socket.io/?EIO=4&transport=polling&t=Px15_hq&sid=Kc206xnbvz0JVCEgAAAM HTTP/1.1" 200 -
+2026-06-13 15:37:54,792 [INFO] 127.0.0.1 - - [13/Jun/2026 15:37:54] "GET / HTTP/1.1" 200 -
+2026-06-13 15:37:54,851 [INFO] 127.0.0.1 - - [13/Jun/2026 15:37:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:37:54,852 [INFO] 127.0.0.1 - - [13/Jun/2026 15:37:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:37:54,856 [INFO] 127.0.0.1 - - [13/Jun/2026 15:37:54] "GET /socket.io/?EIO=4&transport=polling&t=Px1D0wb HTTP/1.1" 200 -
+2026-06-13 15:37:54,900 [INFO] 127.0.0.1 - - [13/Jun/2026 15:37:54] "POST /socket.io/?EIO=4&transport=polling&t=Px1D0xE&sid=vHHi3H9kU4FxjesgAAAO HTTP/1.1" 200 -
+2026-06-13 15:37:54,909 [INFO] 127.0.0.1 - - [13/Jun/2026 15:37:54] "GET /socket.io/?EIO=4&transport=polling&t=Px1D0xF&sid=vHHi3H9kU4FxjesgAAAO HTTP/1.1" 200 -
+2026-06-13 15:38:11,898 [INFO] [LOGIN_OK] User logged in: bob from 127.0.0.1
+2026-06-13 15:38:11,899 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:11] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:38:11,908 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:11] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:15,153 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:15] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:15,154 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:15,154 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:15,155 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:15,156 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:15,157 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:15] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:38:15,209 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:15] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:38:15,667 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:15] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:15,669 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:15] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:38:15,722 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:15] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:38:16,550 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:16] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:16,551 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:16,551 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:16,552 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:16,553 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:16,553 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:16] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:38:16,605 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:16] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:38:29,150 [INFO] [LOGIN_OK] User logged in: alice from 127.0.0.1
+2026-06-13 15:38:29,151 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:29] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:38:29,160 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:29] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:31,336 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:31] "GET / HTTP/1.1" 200 -
+2026-06-13 15:38:31,342 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:31] "GET /socket.io/?EIO=4&transport=websocket&sid=Kc206xnbvz0JVCEgAAAM HTTP/1.1" 200 -
+2026-06-13 15:38:31,362 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:38:31,363 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:38:31,370 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:31] "GET /socket.io/?EIO=4&transport=polling&t=Px1D9r7 HTTP/1.1" 200 -
+2026-06-13 15:38:31,388 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:31] "POST /socket.io/?EIO=4&transport=polling&t=Px1D9rM&sid=tmlbbKzXKz5oRJ8DAAAQ HTTP/1.1" 200 -
+2026-06-13 15:38:31,391 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:31] "GET /socket.io/?EIO=4&transport=polling&t=Px1D9rN&sid=tmlbbKzXKz5oRJ8DAAAQ HTTP/1.1" 200 -
+2026-06-13 15:38:31,401 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:31] "GET /socket.io/?EIO=4&transport=polling&t=Px1D9rd&sid=tmlbbKzXKz5oRJ8DAAAQ HTTP/1.1" 200 -
+2026-06-13 15:38:35,153 [INFO] [LOGIN_OK] User logged in: alice from 127.0.0.1
+2026-06-13 15:38:35,154 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:35] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:38:35,161 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:35] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:39,150 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:39] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:39,151 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:39] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:38:39,206 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:39] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:38:40,801 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:40] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:40,802 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:40,802 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:40,803 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:40,804 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:40,804 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:40] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:40,857 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:40] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:38:41,735 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:41] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:41,740 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:38:41,740 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:38:41,741 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:41] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:38:41,793 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:41] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:38:42,270 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:42] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:42,272 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:42] "GET /api/messages/dave HTTP/1.1" 200 -
+2026-06-13 15:38:42,325 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:42] "GET /api/crypto-info/dave HTTP/1.1" 200 -
+2026-06-13 15:38:42,868 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:42] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:42,870 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:42,870 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:42,871 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:42,872 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:42,872 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:42] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:42,926 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:42] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:38:48,821 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:48] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:48,822 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:48,822 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:48,823 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:48,823 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:48,824 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:48] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:48,876 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:48] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:38:51,700 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:Jqo9CnCB…]
+2026-06-13 15:38:51,700 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:51] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:38:51,708 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,708 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,708 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,708 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,735 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:51] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:38:51,759 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:38:51,759 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:51] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:51,761 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,761 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,761 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,761 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,761 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:51,761 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:51] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:54,884 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:54] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:54,885 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:54,885 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:54,885 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:54,886 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:54,886 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:54,887 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:54] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:54,940 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:54] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:38:55,902 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:55] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:55,903 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:55,904 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:55,906 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:55,907 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:55,907 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:55,908 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:55] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:55,957 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:55] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:38:56,719 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:56] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:56,724 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:38:56,724 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:38:56,724 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:56] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:38:56,779 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:56] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:38:57,686 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:57] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:57,687 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:57] "GET /api/messages/dave HTTP/1.1" 200 -
+2026-06-13 15:38:57,741 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:57] "GET /api/crypto-info/dave HTTP/1.1" 200 -
+2026-06-13 15:38:58,302 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:58] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:58,303 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,306 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,306 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,306 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,306 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,307 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:58] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:58,359 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:58] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:38:58,718 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:58] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:38:58,723 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,724 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,725 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,725 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,725 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:38:58,725 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:58] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:38:58,776 [INFO] 127.0.0.1 - - [13/Jun/2026 15:38:58] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:39:00,639 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:00] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:00,640 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:00,640 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:00,640 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:00,641 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:00,642 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:00,642 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:00] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:39:00,695 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:00] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:39:01,202 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:01] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:01,204 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:39:01,205 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:39:01,205 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:01] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:39:01,259 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:01] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:39:01,802 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:01] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:01,803 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:01] "GET /api/messages/dave HTTP/1.1" 200 -
+2026-06-13 15:39:01,857 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:01] "GET /api/crypto-info/dave HTTP/1.1" 200 -
+2026-06-13 15:39:02,487 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:02] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:02,488 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:39:02,488 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:39:02,489 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:02] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:39:02,540 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:02] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:39:04,248 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:04] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:04,249 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:39:04,250 [ERROR] [DECRYPT_FAIL] Decryption failed alice→carol: Replay attack detected — nonce already seen
+2026-06-13 15:39:04,250 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:04] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:39:04,303 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:04] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:39:06,653 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:06] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:06,654 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:06] "GET /api/messages/dave HTTP/1.1" 200 -
+2026-06-13 15:39:06,708 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:06] "GET /api/crypto-info/dave HTTP/1.1" 200 -
+2026-06-13 15:39:07,386 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:07] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:07,387 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:07,388 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:07,389 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:07,391 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:07,391 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:07,392 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:07] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:39:07,442 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:07] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:39:11,847 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:s9h4jxlC…]
+2026-06-13 15:39:11,848 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:11] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:39:11,853 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,853 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,853 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,853 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,853 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,880 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:11] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:39:11,904 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:39:11,904 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:11] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:39:11,906 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,906 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,906 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,906 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,906 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,906 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:11,907 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:11] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:39:14,267 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:14] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:14,268 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:14,269 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:14,269 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:14,269 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:14,269 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:14,273 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:14,274 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:14] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:39:14,326 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:14] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:39:15,403 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:15] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:15,404 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,405 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,405 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,406 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,406 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,406 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,406 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:15] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:39:15,459 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:15] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:39:15,604 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:15] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:15,605 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,605 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,606 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,607 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,607 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,607 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:15,608 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:15] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:39:15,659 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:15] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:39:25,934 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:25] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:39:25,935 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:25,935 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:25,935 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:25,936 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:25,937 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:25,937 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:39:25,937 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:25] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:39:25,990 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:25] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:39:58,577 [INFO] 127.0.0.1 - - [13/Jun/2026 15:39:58] "GET /socket.io/?EIO=4&transport=websocket&sid=vHHi3H9kU4FxjesgAAAO HTTP/1.1" 200 -
+2026-06-13 15:40:02,590 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:02] "GET / HTTP/1.1" 200 -
+2026-06-13 15:40:02,642 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-13 15:40:02,643 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:02] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-06-13 15:40:02,694 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:02] "GET /socket.io/?EIO=4&transport=polling&t=Px1DW84 HTTP/1.1" 200 -
+2026-06-13 15:40:02,744 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:02] "POST /socket.io/?EIO=4&transport=polling&t=Px1DW8q&sid=3Rs3nrfvPHi5gwzwAAAS HTTP/1.1" 200 -
+2026-06-13 15:40:02,748 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:02] "GET /socket.io/?EIO=4&transport=polling&t=Px1DW8q.0&sid=3Rs3nrfvPHi5gwzwAAAS HTTP/1.1" 200 -
+2026-06-13 15:40:08,154 [INFO] [LOGIN_OK] User logged in: bob from 127.0.0.1
+2026-06-13 15:40:08,155 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:08] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:40:08,160 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:08] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:40:09,214 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:09] "GET / HTTP/1.1" 200 -
+2026-06-13 15:40:09,218 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:09] "GET /socket.io/?EIO=4&transport=websocket&sid=3Rs3nrfvPHi5gwzwAAAS HTTP/1.1" 200 -
+2026-06-13 15:40:09,238 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:40:09,239 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:40:09,246 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:09] "GET /socket.io/?EIO=4&transport=polling&t=Px1DXkR HTTP/1.1" 200 -
+2026-06-13 15:40:09,251 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:09] "POST /socket.io/?EIO=4&transport=polling&t=Px1DXkW&sid=Rjms4vteXIrR0z0WAAAU HTTP/1.1" 200 -
+2026-06-13 15:40:09,253 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:09] "GET /socket.io/?EIO=4&transport=polling&t=Px1DXkX&sid=Rjms4vteXIrR0z0WAAAU HTTP/1.1" 200 -
+2026-06-13 15:40:13,106 [INFO] [LOGIN_OK] User logged in: bob from 127.0.0.1
+2026-06-13 15:40:13,107 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:13] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:40:13,109 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:13] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:40:14,120 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:14] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:40:14,122 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:14,123 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:14,123 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:14,124 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:14,125 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:14,125 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:14,125 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:14] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:40:14,179 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:14] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:40:16,886 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:16] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:40:16,887 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:16,887 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:16,887 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:16,887 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:16,888 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:16,889 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:16,889 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:16] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:40:16,942 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:16] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:40:18,973 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:STdlk5cg…]
+2026-06-13 15:40:18,974 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:18] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,981 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,982 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:18] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:40:18,982 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,983 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,983 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,983 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,983 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,983 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,983 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:40:18,983 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:18] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:40:19,009 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:19] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:40:19,033 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:40:19,033 [INFO] 127.0.0.1 - - [13/Jun/2026 15:40:19] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:41:18,311 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:ScSlqGQU…]
+2026-06-13 15:41:18,312 [INFO] 127.0.0.1 - - [13/Jun/2026 15:41:18] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:41:18,318 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,319 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,319 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,319 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,319 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,319 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,319 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,319 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,320 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,320 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,320 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,320 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,320 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,320 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,320 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,320 [INFO] 127.0.0.1 - - [13/Jun/2026 15:41:18] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:41:18,322 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,322 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,322 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,322 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,322 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,322 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,322 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,322 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:41:18,322 [INFO] 127.0.0.1 - - [13/Jun/2026 15:41:18] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:41:18,346 [INFO] 127.0.0.1 - - [13/Jun/2026 15:41:18] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:41:18,371 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:41:18,371 [INFO] 127.0.0.1 - - [13/Jun/2026 15:41:18] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:41:56,199 [INFO] [STARTUP] SecureChat started — AES-256-GCM + HMAC-SHA256 + bcrypt ready
+2026-06-13 15:41:56,239 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-13 15:41:56,239 [INFO] [33mPress CTRL+C to quit[0m
+2026-06-13 15:41:56,239 [INFO]  * Restarting with stat
+2026-06-13 15:41:57,323 [INFO] [STARTUP] SecureChat started — AES-256-GCM + HMAC-SHA256 + bcrypt ready
+2026-06-13 15:41:57,342 [WARNING]  * Debugger is active!
+2026-06-13 15:41:57,357 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 15:42:18,000 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:18] "GET / HTTP/1.1" 200 -
+2026-06-13 15:42:18,076 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:42:18,076 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:42:18,081 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1E1BU HTTP/1.1" 200 -
+2026-06-13 15:42:18,125 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:18] "POST /socket.io/?EIO=4&transport=polling&t=Px1E1C8&sid=DFQD0IQ4dxxpoW9zAAAA HTTP/1.1" 200 -
+2026-06-13 15:42:18,126 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1E1C9&sid=DFQD0IQ4dxxpoW9zAAAA HTTP/1.1" 200 -
+2026-06-13 15:42:18,146 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1E1CW&sid=DFQD0IQ4dxxpoW9zAAAA HTTP/1.1" 200 -
+2026-06-13 15:42:18,157 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1E1Cb&sid=DFQD0IQ4dxxpoW9zAAAA HTTP/1.1" 200 -
+2026-06-13 15:42:20,257 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:20] "GET / HTTP/1.1" 200 -
+2026-06-13 15:42:20,325 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:42:20,326 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:42:20,331 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:20] "GET /socket.io/?EIO=4&transport=polling&t=Px1E1kf HTTP/1.1" 200 -
+2026-06-13 15:42:20,357 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:20] "POST /socket.io/?EIO=4&transport=polling&t=Px1E1l1&sid=PDMhT7xnX6VGQBQbAAAC HTTP/1.1" 200 -
+2026-06-13 15:42:20,359 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:20] "GET /socket.io/?EIO=4&transport=polling&t=Px1E1l2&sid=PDMhT7xnX6VGQBQbAAAC HTTP/1.1" 200 -
+2026-06-13 15:42:25,639 [INFO] [LOGIN_OK] User logged in: alice from 127.0.0.1
+2026-06-13 15:42:25,640 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:25] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:42:25,653 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:25] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:42:27,870 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:27] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:42:27,872 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:27] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:42:27,926 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:27] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:42:32,786 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:3ljos0zz…]
+2026-06-13 15:42:32,786 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:32] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:42:32,824 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:32] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:42:32,848 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:42:32,848 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:32] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:42:40,673 [INFO] [LOGIN_OK] User logged in: bob from 127.0.0.1
+2026-06-13 15:42:40,675 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:40] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:42:40,677 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:40] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:42:41,767 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:41] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:42:41,767 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:42:41,768 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:41] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:42:41,799 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:41] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:42:49,697 [INFO] [MSG_ENCRYPTED] Message encrypted bob→alice [AES-256-GCM, IV:W6OEJYCx…]
+2026-06-13 15:42:49,698 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:49] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:42:49,701 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:42:49,728 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:49] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:42:49,752 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:42:49,752 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:49] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:42:56,306 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:56] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:42:56,308 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:42:56,308 [ERROR] [DECRYPT_FAIL] Decryption failed bob→alice: Replay attack detected — nonce already seen
+2026-06-13 15:42:56,308 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:56] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:42:56,362 [INFO] 127.0.0.1 - - [13/Jun/2026 15:42:56] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:43:15,322 [WARNING] [BRUTE_FORCE] Brute force simulation started against 'alice'
+2026-06-13 15:43:15,591 [WARNING] [BF_ATTEMPT] BF guess 'password' against 'alice': fail
+2026-06-13 15:43:15,820 [WARNING] [BF_ATTEMPT] BF guess '123456' against 'alice': fail
+2026-06-13 15:43:16,049 [WARNING] [BF_ATTEMPT] BF guess 'letmein' against 'alice': fail
+2026-06-13 15:43:16,281 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' against 'alice': fail
+2026-06-13 15:43:16,511 [WARNING] [BF_ATTEMPT] BF guess 'alice' against 'alice': fail
+2026-06-13 15:43:16,740 [WARNING] [BF_ATTEMPT] BF guess 'admin' against 'alice': fail
+2026-06-13 15:43:16,971 [WARNING] [BF_ATTEMPT] BF guess 'secret' against 'alice': fail
+2026-06-13 15:43:16,971 [INFO] [BF_COMPLETE] Brute force complete — 7 attempts in 1647.9ms
+2026-06-13 15:43:16,971 [INFO] 127.0.0.1 - - [13/Jun/2026 15:43:16] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 15:43:28,320 [INFO] 127.0.0.1 - - [13/Jun/2026 15:43:28] "GET /api/logs HTTP/1.1" 200 -
+2026-06-13 15:43:36,119 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce d200aeb7… bob→alice
+2026-06-13 15:43:36,120 [INFO] [REPLAY_DETECTED] Replay blocked: Replay attack detected — nonce 'd200aeb7…' already seen
+2026-06-13 15:43:36,120 [INFO] 127.0.0.1 - - [13/Jun/2026 15:43:36] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 15:43:47,459 [INFO] 127.0.0.1 - - [13/Jun/2026 15:43:47] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:43:49,504 [WARNING] [MITM_ATTEMPT] MITM: intercepted and tampered ciphertext bob→alice
+2026-06-13 15:43:49,505 [INFO] [MITM_DETECTED] MITM detected and blocked: Replay attack detected — nonce already seen
+2026-06-13 15:43:49,505 [INFO] 127.0.0.1 - - [13/Jun/2026 15:43:49] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-13 15:43:57,126 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:rmKBiKCR…]
+2026-06-13 15:43:57,126 [INFO] 127.0.0.1 - - [13/Jun/2026 15:43:57] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:43:57,133 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:43:57,133 [ERROR] [DECRYPT_FAIL] Decryption failed bob→alice: Replay attack detected — nonce already seen
+2026-06-13 15:43:57,183 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:43:57,183 [INFO] 127.0.0.1 - - [13/Jun/2026 15:43:57] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:44:01,324 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:01] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:44:01,325 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:01,326 [ERROR] [DECRYPT_FAIL] Decryption failed bob→alice: Replay attack detected — nonce already seen
+2026-06-13 15:44:01,326 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:01,326 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:01] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:44:01,379 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:01] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:44:02,674 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:02] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:44:02,675 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:02,675 [ERROR] [DECRYPT_FAIL] Decryption failed bob→alice: Replay attack detected — nonce already seen
+2026-06-13 15:44:02,676 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:02,677 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:02] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:44:02,729 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:02] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:44:02,824 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:02] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:44:02,826 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:02,826 [ERROR] [DECRYPT_FAIL] Decryption failed bob→alice: Replay attack detected — nonce already seen
+2026-06-13 15:44:02,826 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:02,826 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:02] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:44:02,874 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:02] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:44:05,814 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:NCEMO8+3…]
+2026-06-13 15:44:05,815 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:05] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:44:05,820 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:05,820 [ERROR] [DECRYPT_FAIL] Decryption failed bob→alice: Replay attack detected — nonce already seen
+2026-06-13 15:44:05,820 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:05,871 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:44:05,871 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:05] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:44:08,023 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:08] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:44:08,024 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:08,024 [ERROR] [DECRYPT_FAIL] Decryption failed bob→alice: Replay attack detected — nonce already seen
+2026-06-13 15:44:08,025 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:08,025 [ERROR] [DECRYPT_FAIL] Decryption failed alice→bob: Replay attack detected — nonce already seen
+2026-06-13 15:44:08,026 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:08] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:44:08,073 [INFO] 127.0.0.1 - - [13/Jun/2026 15:44:08] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:48:08,606 [INFO]  * Detected change in '/Users/imvk._/Desktop/SecureChat/app.py', reloading
+2026-06-13 15:48:08,700 [INFO]  * Restarting with stat
+2026-06-13 15:48:09,972 [INFO] [STARTUP] SecureChat started — AES-256-GCM + HMAC-SHA256 + bcrypt ready
+2026-06-13 15:48:09,998 [WARNING]  * Debugger is active!
+2026-06-13 15:48:10,013 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 15:48:10,021 [INFO] 127.0.0.1 - - [13/Jun/2026 15:48:10] "GET /socket.io/?EIO=4&transport=polling&t=Px1FN4v HTTP/1.1" 200 -
+2026-06-13 15:48:10,022 [INFO] 127.0.0.1 - - [13/Jun/2026 15:48:10] "GET /socket.io/?EIO=4&transport=polling&t=Px1FN4v HTTP/1.1" 200 -
+2026-06-13 15:48:10,032 [INFO] 127.0.0.1 - - [13/Jun/2026 15:48:10] "POST /socket.io/?EIO=4&transport=polling&t=Px1FN6i&sid=Berp4YMVrw4TAhJSAAAA HTTP/1.1" 200 -
+2026-06-13 15:48:10,035 [INFO] 127.0.0.1 - - [13/Jun/2026 15:48:10] "POST /socket.io/?EIO=4&transport=polling&t=Px1FN6k&sid=kC5GuiqLBNbQDGkHAAAB HTTP/1.1" 200 -
+2026-06-13 15:48:10,035 [INFO] 127.0.0.1 - - [13/Jun/2026 15:48:10] "GET /socket.io/?EIO=4&transport=polling&t=Px1FN6l&sid=Berp4YMVrw4TAhJSAAAA HTTP/1.1" 200 -
+2026-06-13 15:48:10,037 [INFO] 127.0.0.1 - - [13/Jun/2026 15:48:10] "GET /socket.io/?EIO=4&transport=polling&t=Px1FN6l&sid=kC5GuiqLBNbQDGkHAAAB HTTP/1.1" 200 -
+2026-06-13 15:49:18,813 [INFO]  * Detected change in '/Users/imvk._/Desktop/SecureChat/app.py', reloading
+2026-06-13 15:49:18,899 [INFO]  * Restarting with stat
+2026-06-13 15:49:20,122 [INFO] [STARTUP] SecureChat started — AES-256-GCM + HMAC-SHA256 + bcrypt ready
+2026-06-13 15:49:20,144 [WARNING]  * Debugger is active!
+2026-06-13 15:49:20,158 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 15:49:20,922 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:20] "GET /socket.io/?EIO=4&transport=polling&t=Px1FeQG HTTP/1.1" 200 -
+2026-06-13 15:49:20,923 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:20] "GET /socket.io/?EIO=4&transport=polling&t=Px1FeQG HTTP/1.1" 200 -
+2026-06-13 15:49:20,934 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:20] "POST /socket.io/?EIO=4&transport=polling&t=Px1FeQW&sid=i-_oA69Leq6E9uYOAAAA HTTP/1.1" 200 -
+2026-06-13 15:49:20,938 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:20] "POST /socket.io/?EIO=4&transport=polling&t=Px1FeQW&sid=dMLAelVV0uOaQJimAAAB HTTP/1.1" 200 -
+2026-06-13 15:49:20,941 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:20] "GET /socket.io/?EIO=4&transport=polling&t=Px1FeQX&sid=i-_oA69Leq6E9uYOAAAA HTTP/1.1" 200 -
+2026-06-13 15:49:20,942 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:20] "GET /socket.io/?EIO=4&transport=polling&t=Px1FeQX&sid=dMLAelVV0uOaQJimAAAB HTTP/1.1" 200 -
+2026-06-13 15:49:26,802 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:26] "GET / HTTP/1.1" 200 -
+2026-06-13 15:49:26,813 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:26] "GET /socket.io/?EIO=4&transport=websocket&sid=i-_oA69Leq6E9uYOAAAA HTTP/1.1" 200 -
+2026-06-13 15:49:26,846 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:49:26,850 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:49:26,865 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:26] "GET /socket.io/?EIO=4&transport=polling&t=Px1FftF HTTP/1.1" 200 -
+2026-06-13 15:49:26,873 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:26] "POST /socket.io/?EIO=4&transport=polling&t=Px1FftL&sid=-1v-oqwq6fZCgvPvAAAE HTTP/1.1" 200 -
+2026-06-13 15:49:26,876 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:26] "GET /socket.io/?EIO=4&transport=polling&t=Px1FftM&sid=-1v-oqwq6fZCgvPvAAAE HTTP/1.1" 200 -
+2026-06-13 15:49:26,884 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:26] "GET /socket.io/?EIO=4&transport=polling&t=Px1FftX&sid=-1v-oqwq6fZCgvPvAAAE HTTP/1.1" 200 -
+2026-06-13 15:49:31,995 [INFO] [LOGIN_OK] User logged in: alice from 127.0.0.1
+2026-06-13 15:49:31,995 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:31] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:49:32,001 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:32] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:49:34,144 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:34] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:49:34,145 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:34] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:49:34,200 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:34] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:49:36,661 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:36] "GET / HTTP/1.1" 200 -
+2026-06-13 15:49:36,669 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:36] "GET /socket.io/?EIO=4&transport=websocket&sid=dMLAelVV0uOaQJimAAAB HTTP/1.1" 200 -
+2026-06-13 15:49:36,686 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:49:36,687 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 15:49:36,696 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:36] "GET /socket.io/?EIO=4&transport=polling&t=Px1FiGr HTTP/1.1" 200 -
+2026-06-13 15:49:36,705 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:36] "POST /socket.io/?EIO=4&transport=polling&t=Px1FiGy&sid=XvWRsgV-5MSPsPCZAAAG HTTP/1.1" 200 -
+2026-06-13 15:49:36,708 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:36] "GET /socket.io/?EIO=4&transport=polling&t=Px1FiGy.0&sid=XvWRsgV-5MSPsPCZAAAG HTTP/1.1" 200 -
+2026-06-13 15:49:40,741 [INFO] [LOGIN_OK] User logged in: bob from 127.0.0.1
+2026-06-13 15:49:40,742 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:40] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:49:40,747 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:40] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:49:42,491 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:42] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:49:42,493 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:42] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:49:42,548 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:42] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:49:55,851 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:Bv2WDYqy…]
+2026-06-13 15:49:55,852 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:55] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:49:55,924 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:55] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:49:55,948 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:49:55,948 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:55] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:49:58,180 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:58] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:49:58,237 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:58] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:49:58,268 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:49:58,268 [INFO] 127.0.0.1 - - [13/Jun/2026 15:49:58] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:50:05,650 [INFO] [MSG_ENCRYPTED] Message encrypted bob→alice [AES-256-GCM, IV:jZE7FZKd…]
+2026-06-13 15:50:05,650 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:05] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:50:05,681 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:05] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:50:05,705 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:50:05,752 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:50:05,752 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:05] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:50:08,327 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:08] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:50:08,381 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:08] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:50:08,412 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:50:08,461 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:50:08,461 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:08] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:50:13,959 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce 5931b7a3… bob→alice
+2026-06-13 15:50:13,959 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:13] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 15:50:20,026 [WARNING] [MITM_ATTEMPT] MITM: intercepted and tampered ciphertext bob→alice
+2026-06-13 15:50:20,113 [INFO] [MITM_DETECTED] MITM detected and blocked: HMAC verification failed — message integrity compromised
+2026-06-13 15:50:20,113 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:20] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-13 15:50:22,925 [WARNING] [BRUTE_FORCE] Brute force simulation started against 'alice'
+2026-06-13 15:50:23,195 [WARNING] [BF_ATTEMPT] BF guess 'password' against 'alice': fail
+2026-06-13 15:50:23,427 [WARNING] [BF_ATTEMPT] BF guess '123456' against 'alice': fail
+2026-06-13 15:50:23,658 [WARNING] [BF_ATTEMPT] BF guess 'letmein' against 'alice': fail
+2026-06-13 15:50:23,889 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' against 'alice': fail
+2026-06-13 15:50:24,119 [WARNING] [BF_ATTEMPT] BF guess 'alice' against 'alice': fail
+2026-06-13 15:50:24,348 [WARNING] [BF_ATTEMPT] BF guess 'admin' against 'alice': fail
+2026-06-13 15:50:24,577 [WARNING] [BF_ATTEMPT] BF guess 'secret' against 'alice': fail
+2026-06-13 15:50:24,577 [INFO] [BF_COMPLETE] Brute force complete — 7 attempts in 1651.2ms
+2026-06-13 15:50:24,577 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:24] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 15:50:28,508 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:28] "GET /api/logs HTTP/1.1" 200 -
+2026-06-13 15:50:33,180 [INFO] 127.0.0.1 - - [13/Jun/2026 15:50:33] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:51:35,553 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:fTusUugi…]
+2026-06-13 15:51:35,553 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:35] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:51:35,583 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:35] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:51:35,606 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:35,653 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:51:35,701 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:35,701 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:35] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:51:37,960 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:37] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:51:38,021 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:38] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:51:38,050 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:38,100 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:51:38,148 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:38,148 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:38] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:51:43,941 [INFO] [MSG_ENCRYPTED] Message encrypted bob→alice [AES-256-GCM, IV:PBkndi+T…]
+2026-06-13 15:51:43,942 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:43] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:51:43,974 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:43] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:51:43,997 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:44,044 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:51:44,092 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:44,139 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:51:44,139 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:44] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:51:46,157 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:46] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:51:46,213 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:46] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:51:46,245 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:46,294 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:51:46,341 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:46,388 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:51:46,389 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:46] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:51:59,214 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:ci4R2cBG…]
+2026-06-13 15:51:59,215 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:59] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:51:59,248 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:59] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:51:59,272 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:59,319 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:51:59,366 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:59,413 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:51:59,461 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:51:59,461 [INFO] 127.0.0.1 - - [13/Jun/2026 15:51:59] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:52:01,231 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:01] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:52:01,289 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:01] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:52:01,320 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:01,369 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:52:01,416 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:01,464 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:52:01,511 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:01,511 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:01] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:52:10,530 [INFO] [MSG_ENCRYPTED] Message encrypted bob→alice [AES-256-GCM, IV:tQLHZqwK…]
+2026-06-13 15:52:10,530 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:10] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:52:10,563 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:10] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 15:52:10,587 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:10,635 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:52:10,682 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:10,730 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:52:10,779 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:10,826 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:52:10,826 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:10] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 15:52:12,759 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:12] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:52:12,814 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:12] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:52:12,846 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:12,895 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:52:12,942 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:12,989 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:52:13,036 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:52:13,083 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:52:13,084 [INFO] 127.0.0.1 - - [13/Jun/2026 15:52:13] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:54:08,296 [WARNING] [MITM_ATTEMPT] MITM: intercepted and tampered ciphertext bob→alice
+2026-06-13 15:54:08,383 [INFO] [MITM_DETECTED] MITM detected and blocked: HMAC verification failed — message integrity compromised
+2026-06-13 15:54:08,383 [INFO] 127.0.0.1 - - [13/Jun/2026 15:54:08] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-13 15:54:12,544 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce b3a671ac… bob→alice
+2026-06-13 15:54:12,544 [INFO] [REPLAY_DETECTED] Replay blocked: Replay attack detected — nonce 'b3a671ac…' already seen
+2026-06-13 15:54:12,545 [INFO] 127.0.0.1 - - [13/Jun/2026 15:54:12] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 15:54:17,808 [WARNING] [BRUTE_FORCE] Brute force simulation started against 'alice'
+2026-06-13 15:54:18,083 [WARNING] [BF_ATTEMPT] BF guess 'password' against 'alice': fail
+2026-06-13 15:54:18,314 [WARNING] [BF_ATTEMPT] BF guess '123456' against 'alice': fail
+2026-06-13 15:54:18,547 [WARNING] [BF_ATTEMPT] BF guess 'letmein' against 'alice': fail
+2026-06-13 15:54:18,777 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' against 'alice': fail
+2026-06-13 15:54:19,016 [WARNING] [BF_ATTEMPT] BF guess 'alice' against 'alice': fail
+2026-06-13 15:54:19,254 [WARNING] [BF_ATTEMPT] BF guess 'admin' against 'alice': fail
+2026-06-13 15:54:19,484 [WARNING] [BF_ATTEMPT] BF guess 'secret' against 'alice': fail
+2026-06-13 15:54:19,485 [INFO] [BF_COMPLETE] Brute force complete — 7 attempts in 1675.6ms
+2026-06-13 15:54:19,485 [INFO] 127.0.0.1 - - [13/Jun/2026 15:54:19] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 15:54:44,994 [INFO] 127.0.0.1 - - [13/Jun/2026 15:54:44] "GET /api/logs HTTP/1.1" 200 -
+2026-06-13 15:55:31,103 [WARNING] [MITM_ATTEMPT] MITM: intercepted and tampered ciphertext bob→alice
+2026-06-13 15:55:31,103 [INFO] [MITM_DETECTED] MITM detected and blocked: Replay attack detected — nonce already seen
+2026-06-13 15:55:31,104 [INFO] 127.0.0.1 - - [13/Jun/2026 15:55:31] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-13 15:55:31,882 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce b3a671ac… bob→alice
+2026-06-13 15:55:31,882 [INFO] [REPLAY_DETECTED] Replay blocked: Replay attack detected — nonce 'b3a671ac…' already seen
+2026-06-13 15:55:31,883 [INFO] 127.0.0.1 - - [13/Jun/2026 15:55:31] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 15:55:32,833 [WARNING] [BRUTE_FORCE] Brute force simulation started against 'alice'
+2026-06-13 15:55:33,102 [WARNING] [BF_ATTEMPT] BF guess 'password' against 'alice': fail
+2026-06-13 15:55:33,333 [WARNING] [BF_ATTEMPT] BF guess '123456' against 'alice': fail
+2026-06-13 15:55:33,565 [WARNING] [BF_ATTEMPT] BF guess 'letmein' against 'alice': fail
+2026-06-13 15:55:33,798 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' against 'alice': fail
+2026-06-13 15:55:34,028 [WARNING] [BF_ATTEMPT] BF guess 'alice' against 'alice': fail
+2026-06-13 15:55:34,260 [WARNING] [BF_ATTEMPT] BF guess 'admin' against 'alice': fail
+2026-06-13 15:55:34,490 [WARNING] [BF_ATTEMPT] BF guess 'secret' against 'alice': fail
+2026-06-13 15:55:34,490 [INFO] [BF_COMPLETE] Brute force complete — 7 attempts in 1656.8ms
+2026-06-13 15:55:34,491 [INFO] 127.0.0.1 - - [13/Jun/2026 15:55:34] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 15:55:35,018 [INFO] 127.0.0.1 - - [13/Jun/2026 15:55:35] "GET /api/logs HTTP/1.1" 200 -
+2026-06-13 15:57:18,229 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:57:18,232 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-13 15:57:52,690 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:52] "GET /socket.io/?EIO=4&transport=websocket&sid=-1v-oqwq6fZCgvPvAAAE HTTP/1.1" 200 -
+2026-06-13 15:57:54,615 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:54] "GET / HTTP/1.1" 200 -
+2026-06-13 15:57:54,717 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-13 15:57:54,721 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:54] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-13 15:57:54,721 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:54] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-06-13 15:57:54,749 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:54] "GET /socket.io/?EIO=4&transport=polling&t=Px1Hbst HTTP/1.1" 200 -
+2026-06-13 15:57:54,783 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:54] "POST /socket.io/?EIO=4&transport=polling&t=Px1HbtR&sid=Sj98LkGRBH6NZpD-AAAI HTTP/1.1" 200 -
+2026-06-13 15:57:54,805 [INFO] 127.0.0.1 - - [13/Jun/2026 15:57:54] "GET /socket.io/?EIO=4&transport=polling&t=Px1HbtT&sid=Sj98LkGRBH6NZpD-AAAI HTTP/1.1" 200 -
+2026-06-13 15:58:02,788 [INFO] [LOGIN_OK] User logged in: alice from 127.0.0.1
+2026-06-13 15:58:02,789 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:02] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 15:58:02,800 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:02] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:58:08,836 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:08] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:58:08,879 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:08] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:58:08,907 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:08,954 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:09,001 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:09,048 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:09,095 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:09,143 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:09,143 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:09] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:58:26,370 [INFO] [MSG_ENCRYPTED] Message encrypted alice→bob [AES-256-GCM, IV:XGg92dke…]
+2026-06-13 15:58:26,371 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:26] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 15:58:26,406 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:26] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:58:26,430 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:26,477 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:26,524 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:26,572 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:26,619 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:26,666 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:26,713 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:26,713 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:26] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:58:26,764 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:26,812 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:26,859 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:26,906 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:26,954 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:27,001 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:27,048 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:27,048 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:27] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 15:58:29,454 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 15:58:29,476 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-13 15:58:52,255 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:52] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 15:58:52,256 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:52] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:58:52,305 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:52] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 15:58:53,035 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:53] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 15:58:53,091 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:53] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 15:58:53,123 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:53,173 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:53,220 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:53,267 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:53,316 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:53,364 [INFO] [MSG_DECRYPTED] Message decrypted bob→alice [HMAC ✓]
+2026-06-13 15:58:53,411 [INFO] [MSG_DECRYPTED] Message decrypted alice→bob [HMAC ✓]
+2026-06-13 15:58:53,411 [INFO] 127.0.0.1 - - [13/Jun/2026 15:58:53] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:08:38,911 [INFO]  * Detected change in '/Users/imvk._/Desktop/SecureChat/app.py', reloading
+2026-06-13 16:08:39,013 [INFO]  * Restarting with stat
+2026-06-13 16:08:40,273 [INFO] [STARTUP] SecureChat started — AES-256-GCM + HMAC-SHA256 + bcrypt ready
+2026-06-13 16:08:40,298 [WARNING]  * Debugger is active!
+2026-06-13 16:08:40,313 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 16:08:40,320 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:40] "GET /socket.io/?EIO=4&transport=polling&t=Px1K3NH HTTP/1.1" 200 -
+2026-06-13 16:08:40,324 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:40] "POST /socket.io/?EIO=4&transport=polling&t=Px1K3U2&sid=3CxAMnUi8iwOQiQCAAAA HTTP/1.1" 200 -
+2026-06-13 16:08:40,326 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:40] "GET /socket.io/?EIO=4&transport=polling&t=Px1K3U3&sid=3CxAMnUi8iwOQiQCAAAA HTTP/1.1" 200 -
+2026-06-13 16:08:40,894 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:40] "GET /socket.io/?EIO=4&transport=polling&t=Px1K3cv HTTP/1.1" 200 -
+2026-06-13 16:08:40,898 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:40] "POST /socket.io/?EIO=4&transport=polling&t=Px1K3d0&sid=ypTGi0m2q6t6RNHOAAAC HTTP/1.1" 200 -
+2026-06-13 16:08:40,903 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:40] "GET /socket.io/?EIO=4&transport=polling&t=Px1K3d1&sid=ypTGi0m2q6t6RNHOAAAC HTTP/1.1" 200 -
+2026-06-13 16:08:40,905 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:40] "GET /socket.io/?EIO=4&transport=polling&t=Px1K3d8&sid=ypTGi0m2q6t6RNHOAAAC HTTP/1.1" 200 -
+2026-06-13 16:08:45,377 [INFO]  * Detected change in '/Users/imvk._/Desktop/SecureChat/app.py', reloading
+2026-06-13 16:08:45,434 [INFO]  * Restarting with stat
+2026-06-13 16:08:46,561 [INFO] [STARTUP] SecureChat started — AES-256-GCM + HMAC-SHA256 + bcrypt ready
+2026-06-13 16:08:46,578 [WARNING]  * Debugger is active!
+2026-06-13 16:08:46,588 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 16:08:46,896 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:46] "GET /socket.io/?EIO=4&transport=polling&t=Px1K54f HTTP/1.1" 200 -
+2026-06-13 16:08:46,896 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:46] "GET /socket.io/?EIO=4&transport=polling&t=Px1K54f HTTP/1.1" 200 -
+2026-06-13 16:08:46,905 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:46] "POST /socket.io/?EIO=4&transport=polling&t=Px1K54q&sid=udaIkjQGvu4Brj23AAAA HTTP/1.1" 200 -
+2026-06-13 16:08:46,912 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:46] "POST /socket.io/?EIO=4&transport=polling&t=Px1K54r&sid=9aIMPYW_rdt3g-hiAAAB HTTP/1.1" 200 -
+2026-06-13 16:08:46,913 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:46] "GET /socket.io/?EIO=4&transport=polling&t=Px1K54r&sid=udaIkjQGvu4Brj23AAAA HTTP/1.1" 200 -
+2026-06-13 16:08:46,915 [INFO] 127.0.0.1 - - [13/Jun/2026 16:08:46] "GET /socket.io/?EIO=4&transport=polling&t=Px1K54r.0&sid=9aIMPYW_rdt3g-hiAAAB HTTP/1.1" 200 -
+2026-06-13 16:12:16,899 [INFO]  * Detected change in '/Users/imvk._/Desktop/SecureChat/app.py', reloading
+2026-06-13 16:12:16,971 [INFO]  * Restarting with stat
+2026-06-13 16:12:18,251 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-13 16:12:18,275 [WARNING]  * Debugger is active!
+2026-06-13 16:12:18,289 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 16:12:18,296 [INFO] 127.0.0.1 - - [13/Jun/2026 16:12:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1KubT HTTP/1.1" 200 -
+2026-06-13 16:12:18,306 [INFO] 127.0.0.1 - - [13/Jun/2026 16:12:18] "POST /socket.io/?EIO=4&transport=polling&t=Px1Kuhy&sid=8FABkd3DloVtSAUgAAAA HTTP/1.1" 200 -
+2026-06-13 16:12:18,308 [INFO] 127.0.0.1 - - [13/Jun/2026 16:12:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1Kui0&sid=8FABkd3DloVtSAUgAAAA HTTP/1.1" 200 -
+2026-06-13 16:12:18,309 [INFO] 127.0.0.1 - - [13/Jun/2026 16:12:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1Kui4&sid=8FABkd3DloVtSAUgAAAA HTTP/1.1" 200 -
+2026-06-13 16:12:18,888 [INFO] 127.0.0.1 - - [13/Jun/2026 16:12:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1Kur4 HTTP/1.1" 200 -
+2026-06-13 16:12:18,894 [INFO] 127.0.0.1 - - [13/Jun/2026 16:12:18] "POST /socket.io/?EIO=4&transport=polling&t=Px1KurB&sid=ooV71YR1lK-OaApJAAAC HTTP/1.1" 200 -
+2026-06-13 16:12:18,896 [INFO] 127.0.0.1 - - [13/Jun/2026 16:12:18] "GET /socket.io/?EIO=4&transport=polling&t=Px1KurC&sid=ooV71YR1lK-OaApJAAAC HTTP/1.1" 200 -
+2026-06-13 16:12:31,432 [INFO]  * Detected change in '/Users/imvk._/Desktop/SecureChat/app.py', reloading
+2026-06-13 16:12:31,496 [INFO]  * Restarting with stat
+2026-06-13 16:13:10,875 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-13 16:13:10,908 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-13 16:13:10,908 [INFO] [33mPress CTRL+C to quit[0m
+2026-06-13 16:13:10,908 [INFO]  * Restarting with stat
+2026-06-13 16:13:11,992 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-13 16:13:12,009 [WARNING]  * Debugger is active!
+2026-06-13 16:13:12,022 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 16:15:42,007 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-13 16:15:42,040 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-13 16:15:42,040 [INFO] [33mPress CTRL+C to quit[0m
+2026-06-13 16:15:42,040 [INFO]  * Restarting with stat
+2026-06-13 16:15:43,121 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-13 16:15:43,138 [WARNING]  * Debugger is active!
+2026-06-13 16:15:43,152 [INFO]  * Debugger PIN: 136-707-090
+2026-06-13 16:16:32,829 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:32] "GET / HTTP/1.1" 200 -
+2026-06-13 16:16:33,545 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:33] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-13 16:16:33,546 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:33] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-06-13 16:16:33,648 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:33] "GET /socket.io/?EIO=4&transport=polling&t=Px1Lt1e HTTP/1.1" 200 -
+2026-06-13 16:16:33,947 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:33] "POST /socket.io/?EIO=4&transport=polling&t=Px1Lt6M&sid=gBCdtJ0kQfGBxbjuAAAA HTTP/1.1" 200 -
+2026-06-13 16:16:33,952 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:33] "GET /socket.io/?EIO=4&transport=polling&t=Px1Lt6N&sid=gBCdtJ0kQfGBxbjuAAAA HTTP/1.1" 200 -
+2026-06-13 16:16:33,953 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 16:16:33,969 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:33] "GET /socket.io/?EIO=4&transport=polling&t=Px1Lt6j&sid=gBCdtJ0kQfGBxbjuAAAA HTTP/1.1" 200 -
+2026-06-13 16:16:33,973 [INFO] 127.0.0.1 - - [13/Jun/2026 16:16:33] "GET /socket.io/?EIO=4&transport=polling&t=Px1Lt6p&sid=gBCdtJ0kQfGBxbjuAAAA HTTP/1.1" 200 -
+2026-06-13 16:17:02,635 [ERROR] [LOGIN_FAIL] Wrong password for 'alice' from 127.0.0.1 [attempt 1/5, 4 remaining]
+2026-06-13 16:17:02,636 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:02] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+2026-06-13 16:17:11,462 [INFO] [LOGIN_OK] Login success: 'alice' from 127.0.0.1 — session 5388534b…
+2026-06-13 16:17:11,466 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:11] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 16:17:11,474 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:11] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:17:12,835 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:12] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:17:12,837 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:12] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:17:12,888 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:12] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:17:16,772 [INFO] [MSG_ENCRYPTED] Encrypted alice→bob [AES-256-GCM | IV:5r+/lbqS… | HMAC:33f3ff8e… | nonce:b47a92bd…]
+2026-06-13 16:17:16,772 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:16] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 16:17:16,841 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:16] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:17:16,866 [INFO] [MSG_DECRYPTED] Decrypted alice→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:17:16,866 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:16] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:17:25,020 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "GET / HTTP/1.1" 200 -
+2026-06-13 16:17:25,123 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,186 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,246 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,253 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,258 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,263 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,269 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "GET / HTTP/1.1" 200 -
+2026-06-13 16:17:25,274 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,279 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,284 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,291 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,295 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:25,300 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 16:17:26,510 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "GET / HTTP/1.1" 200 -
+2026-06-13 16:17:26,515 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 16:17:26,518 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 16:17:26,534 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "GET /socket.io/?EIO=4&transport=polling&t=Px1M3y3 HTTP/1.1" 200 -
+2026-06-13 16:17:26,714 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:26,715 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "POST /socket.io/?EIO=4&transport=polling&t=Px1M3-s&sid=uEcEGZr5YIST8bliAAAC HTTP/1.1" 200 -
+2026-06-13 16:17:26,720 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "GET /socket.io/?EIO=4&transport=polling&t=Px1M3-t&sid=uEcEGZr5YIST8bliAAAC HTTP/1.1" 200 -
+2026-06-13 16:17:26,728 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "GET /socket.io/?EIO=4&transport=polling&t=Px1M3_4&sid=uEcEGZr5YIST8bliAAAC HTTP/1.1" 200 -
+2026-06-13 16:17:26,773 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-06-13 16:17:26,825 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 16:17:26,937 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "GET /socket.io/?EIO=4&transport=websocket&sid=uEcEGZr5YIST8bliAAAC HTTP/1.1" 200 -
+2026-06-13 16:17:26,962 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "GET / HTTP/1.1" 200 -
+2026-06-13 16:17:26,966 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 16:17:26,969 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 16:17:27,008 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:27] "GET /socket.io/?EIO=4&transport=polling&t=Px1M43T HTTP/1.1" 200 -
+2026-06-13 16:17:27,025 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:27] "POST /socket.io/?EIO=4&transport=polling&t=Px1M43i&sid=6DT0aPpQkZPh2iZ0AAAE HTTP/1.1" 200 -
+2026-06-13 16:17:27,027 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:27] "GET /socket.io/?EIO=4&transport=polling&t=Px1M43i.0&sid=6DT0aPpQkZPh2iZ0AAAE HTTP/1.1" 200 -
+2026-06-13 16:17:27,032 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:27] "GET /socket.io/?EIO=4&transport=polling&t=Px1M43r&sid=6DT0aPpQkZPh2iZ0AAAE HTTP/1.1" 200 -
+2026-06-13 16:17:34,580 [INFO] [LOGIN_OK] Login success: 'bob' from 127.0.0.1 — session 66ffd4a7…
+2026-06-13 16:17:34,580 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:34] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 16:17:34,590 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:34] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:17:35,603 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:35] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:17:35,659 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:35] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 16:17:35,690 [INFO] [MSG_DECRYPTED] Decrypted alice→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:17:35,690 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:35] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 16:17:45,016 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:45] "[31m[1mPOST /api/attack/mitm HTTP/1.1[0m" 400 -
+2026-06-13 16:17:47,987 [INFO] 127.0.0.1 - - [13/Jun/2026 16:17:47] "[31m[1mPOST /api/attack/replay HTTP/1.1[0m" 400 -
+2026-06-13 16:18:27,277 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:27] "[31m[1mPOST /api/attack/mitm HTTP/1.1[0m" 400 -
+2026-06-13 16:18:28,938 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:28] "[31m[1mPOST /api/attack/mitm HTTP/1.1[0m" 400 -
+2026-06-13 16:18:29,886 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:29] "[31m[1mPOST /api/attack/mitm HTTP/1.1[0m" 400 -
+2026-06-13 16:18:30,085 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:30] "[31m[1mPOST /api/attack/mitm HTTP/1.1[0m" 400 -
+2026-06-13 16:18:30,805 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:30] "[31m[1mPOST /api/attack/replay HTTP/1.1[0m" 400 -
+2026-06-13 16:18:31,977 [WARNING] [BRUTE_FORCE] Brute force simulation: 10 common passwords against 'alice'
+2026-06-13 16:18:32,250 [WARNING] [BF_ATTEMPT] BF guess 'password' → 'alice': ✗ fail (271.7ms)
+2026-06-13 16:18:32,479 [WARNING] [BF_ATTEMPT] BF guess '123456' → 'alice': ✗ fail (229.0ms)
+2026-06-13 16:18:32,709 [WARNING] [BF_ATTEMPT] BF guess 'letmein' → 'alice': ✗ fail (230.1ms)
+2026-06-13 16:18:32,941 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' → 'alice': ✗ fail (231.7ms)
+2026-06-13 16:18:33,172 [WARNING] [BF_ATTEMPT] BF guess 'alice' → 'alice': ✗ fail (230.4ms)
+2026-06-13 16:18:33,410 [WARNING] [BF_ATTEMPT] BF guess 'admin' → 'alice': ✗ fail (237.7ms)
+2026-06-13 16:18:33,641 [WARNING] [BF_ATTEMPT] BF guess 'secret' → 'alice': ✗ fail (230.9ms)
+2026-06-13 16:18:33,871 [WARNING] [BF_ATTEMPT] BF guess 'abc123' → 'alice': ✗ fail (229.5ms)
+2026-06-13 16:18:34,100 [WARNING] [BF_ATTEMPT] BF guess 'monkey' → 'alice': ✗ fail (228.9ms)
+2026-06-13 16:18:34,330 [WARNING] [BF_ATTEMPT] BF guess 'dragon' → 'alice': ✗ fail (230.0ms)
+2026-06-13 16:18:34,330 [INFO] [BF_COMPLETE] Brute force done — 10 attempts, 2352.3ms total, ~4.26 guesses/sec (bcrypt)
+2026-06-13 16:18:34,330 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:34] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 16:18:34,900 [WARNING] [BRUTE_FORCE] Brute force simulation: 10 common passwords against 'alice'
+2026-06-13 16:18:35,176 [WARNING] [BF_ATTEMPT] BF guess 'password' → 'alice': ✗ fail (275.3ms)
+2026-06-13 16:18:35,414 [WARNING] [BF_ATTEMPT] BF guess '123456' → 'alice': ✗ fail (238.3ms)
+2026-06-13 16:18:35,660 [WARNING] [BF_ATTEMPT] BF guess 'letmein' → 'alice': ✗ fail (245.7ms)
+2026-06-13 16:18:35,893 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' → 'alice': ✗ fail (232.0ms)
+2026-06-13 16:18:36,124 [WARNING] [BF_ATTEMPT] BF guess 'alice' → 'alice': ✗ fail (231.7ms)
+2026-06-13 16:18:36,355 [WARNING] [BF_ATTEMPT] BF guess 'admin' → 'alice': ✗ fail (230.6ms)
+2026-06-13 16:18:36,584 [WARNING] [BF_ATTEMPT] BF guess 'secret' → 'alice': ✗ fail (228.9ms)
+2026-06-13 16:18:36,813 [WARNING] [BF_ATTEMPT] BF guess 'abc123' → 'alice': ✗ fail (228.8ms)
+2026-06-13 16:18:37,043 [WARNING] [BF_ATTEMPT] BF guess 'monkey' → 'alice': ✗ fail (229.6ms)
+2026-06-13 16:18:37,273 [WARNING] [BF_ATTEMPT] BF guess 'dragon' → 'alice': ✗ fail (230.5ms)
+2026-06-13 16:18:37,274 [INFO] [BF_COMPLETE] Brute force done — 10 attempts, 2372.9ms total, ~4.22 guesses/sec (bcrypt)
+2026-06-13 16:18:37,274 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:37] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 16:18:44,620 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:44] "[31m[1mPOST /api/attack/replay HTTP/1.1[0m" 400 -
+2026-06-13 16:18:55,391 [INFO] 127.0.0.1 - - [13/Jun/2026 16:18:55] "GET /api/logs HTTP/1.1" 200 -
+2026-06-13 16:19:07,723 [WARNING] [MITM_ATTEMPT] MITM: intercepted ciphertext alice→bob, flipped bytes [0,5,10]
+2026-06-13 16:19:07,809 [INFO] [MITM_DETECTED] MITM detected and blocked: HMAC verification failed — message integrity compromised
+2026-06-13 16:19:07,810 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:07] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-13 16:19:13,684 [WARNING] [BRUTE_FORCE] Brute force simulation: 10 common passwords against 'alice'
+2026-06-13 16:19:13,953 [WARNING] [BF_ATTEMPT] BF guess 'password' → 'alice': ✗ fail (268.6ms)
+2026-06-13 16:19:14,183 [WARNING] [BF_ATTEMPT] BF guess '123456' → 'alice': ✗ fail (230.1ms)
+2026-06-13 16:19:14,413 [WARNING] [BF_ATTEMPT] BF guess 'letmein' → 'alice': ✗ fail (229.3ms)
+2026-06-13 16:19:14,645 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' → 'alice': ✗ fail (232.1ms)
+2026-06-13 16:19:14,876 [WARNING] [BF_ATTEMPT] BF guess 'alice' → 'alice': ✗ fail (230.9ms)
+2026-06-13 16:19:15,110 [WARNING] [BF_ATTEMPT] BF guess 'admin' → 'alice': ✗ fail (233.5ms)
+2026-06-13 16:19:15,341 [WARNING] [BF_ATTEMPT] BF guess 'secret' → 'alice': ✗ fail (230.6ms)
+2026-06-13 16:19:15,571 [WARNING] [BF_ATTEMPT] BF guess 'abc123' → 'alice': ✗ fail (229.9ms)
+2026-06-13 16:19:15,802 [WARNING] [BF_ATTEMPT] BF guess 'monkey' → 'alice': ✗ fail (230.4ms)
+2026-06-13 16:19:16,031 [WARNING] [BF_ATTEMPT] BF guess 'dragon' → 'alice': ✗ fail (229.4ms)
+2026-06-13 16:19:16,031 [INFO] [BF_COMPLETE] Brute force done — 10 attempts, 2346.7ms total, ~4.26 guesses/sec (bcrypt)
+2026-06-13 16:19:16,032 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:16] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 16:19:18,000 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce 'b47a92bd…' from alice→bob
+2026-06-13 16:19:18,000 [INFO] [REPLAY_DETECTED] Replay blocked: Nonce 'b47a92bd…' was registered when message was originally sent. Duplicate rejected immediately.
+2026-06-13 16:19:18,000 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:18] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 16:19:24,970 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:24] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:19:24,971 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:24] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:19:25,886 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:25] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:19:25,887 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:25] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:19:26,585 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:26] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:19:26,678 [INFO] [MSG_DECRYPTED] Decrypted alice→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:19:26,679 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:26] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 16:19:26,802 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:26] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:19:26,873 [INFO] [MSG_DECRYPTED] Decrypted alice→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:19:26,873 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:26] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 16:19:28,469 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce 'b47a92bd…' from alice→bob
+2026-06-13 16:19:28,469 [INFO] [REPLAY_DETECTED] Replay blocked: Nonce 'b47a92bd…' was registered when message was originally sent. Duplicate rejected immediately.
+2026-06-13 16:19:28,470 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:28] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 16:19:29,732 [WARNING] [BRUTE_FORCE] Brute force simulation: 10 common passwords against 'alice'
+2026-06-13 16:19:30,003 [WARNING] [BF_ATTEMPT] BF guess 'password' → 'alice': ✗ fail (270.5ms)
+2026-06-13 16:19:30,234 [WARNING] [BF_ATTEMPT] BF guess '123456' → 'alice': ✗ fail (230.7ms)
+2026-06-13 16:19:30,463 [WARNING] [BF_ATTEMPT] BF guess 'letmein' → 'alice': ✗ fail (229.1ms)
+2026-06-13 16:19:30,692 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' → 'alice': ✗ fail (229.4ms)
+2026-06-13 16:19:30,922 [WARNING] [BF_ATTEMPT] BF guess 'alice' → 'alice': ✗ fail (229.3ms)
+2026-06-13 16:19:31,151 [WARNING] [BF_ATTEMPT] BF guess 'admin' → 'alice': ✗ fail (229.5ms)
+2026-06-13 16:19:31,230 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce 'b47a92bd…' from alice→bob
+2026-06-13 16:19:31,230 [INFO] [REPLAY_DETECTED] Replay blocked: Nonce 'b47a92bd…' was registered when message was originally sent. Duplicate rejected immediately.
+2026-06-13 16:19:31,230 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:31] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 16:19:31,382 [WARNING] [BF_ATTEMPT] BF guess 'secret' → 'alice': ✗ fail (230.8ms)
+2026-06-13 16:19:31,614 [WARNING] [BF_ATTEMPT] BF guess 'abc123' → 'alice': ✗ fail (231.0ms)
+2026-06-13 16:19:31,845 [WARNING] [BF_ATTEMPT] BF guess 'monkey' → 'alice': ✗ fail (231.5ms)
+2026-06-13 16:19:32,076 [WARNING] [BF_ATTEMPT] BF guess 'dragon' → 'alice': ✗ fail (230.7ms)
+2026-06-13 16:19:32,076 [INFO] [BF_COMPLETE] Brute force done — 10 attempts, 2344.0ms total, ~4.27 guesses/sec (bcrypt)
+2026-06-13 16:19:32,077 [INFO] 127.0.0.1 - - [13/Jun/2026 16:19:32] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 16:20:07,655 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:07] "GET / HTTP/1.1" 200 -
+2026-06-13 16:20:07,745 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 16:20:07,746 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 16:20:07,761 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:07] "GET /socket.io/?EIO=4&transport=polling&t=Px1MhJE HTTP/1.1" 200 -
+2026-06-13 16:20:07,822 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:07] "POST /socket.io/?EIO=4&transport=polling&t=Px1MhJl&sid=iuTsM7rPTlMd_OWQAAAG HTTP/1.1" 200 -
+2026-06-13 16:20:07,831 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:07] "GET /socket.io/?EIO=4&transport=polling&t=Px1MhJm&sid=iuTsM7rPTlMd_OWQAAAG HTTP/1.1" 200 -
+2026-06-13 16:20:07,833 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-13 16:20:07,844 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:07] "GET /socket.io/?EIO=4&transport=polling&t=Px1MhKX&sid=iuTsM7rPTlMd_OWQAAAG HTTP/1.1" 200 -
+2026-06-13 16:20:42,093 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:42] "GET /socket.io/?EIO=4&transport=websocket&sid=6DT0aPpQkZPh2iZ0AAAE HTTP/1.1" 200 -
+2026-06-13 16:20:44,164 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:44] "GET /socket.io/?EIO=4&transport=websocket&sid=gBCdtJ0kQfGBxbjuAAAA HTTP/1.1" 200 -
+2026-06-13 16:20:45,905 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:45] "GET / HTTP/1.1" 200 -
+2026-06-13 16:20:45,910 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 16:20:45,911 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 16:20:45,917 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 16:20:45,919 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 16:20:45,941 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:45] "GET /socket.io/?EIO=4&transport=polling&t=Px1Mqdn HTTP/1.1" 200 -
+2026-06-13 16:20:46,052 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "POST /socket.io/?EIO=4&transport=polling&t=Px1MqfV&sid=EbsbtMrnmt4GlryMAAAI HTTP/1.1" 200 -
+2026-06-13 16:20:46,054 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "GET /socket.io/?EIO=4&transport=polling&t=Px1MqfX&sid=EbsbtMrnmt4GlryMAAAI HTTP/1.1" 200 -
+2026-06-13 16:20:46,198 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "GET /socket.io/?EIO=4&transport=websocket&sid=EbsbtMrnmt4GlryMAAAI HTTP/1.1" 200 -
+2026-06-13 16:20:46,221 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "GET / HTTP/1.1" 200 -
+2026-06-13 16:20:46,226 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-13 16:20:46,230 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-13 16:20:46,236 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "GET /socket.io/?EIO=4&transport=polling&t=Px1MqiQ HTTP/1.1" 200 -
+2026-06-13 16:20:46,302 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "POST /socket.io/?EIO=4&transport=polling&t=Px1MqjR&sid=_H1NSvTnlkxBiIPtAAAK HTTP/1.1" 200 -
+2026-06-13 16:20:46,304 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "GET /socket.io/?EIO=4&transport=polling&t=Px1MqjR.0&sid=_H1NSvTnlkxBiIPtAAAK HTTP/1.1" 200 -
+2026-06-13 16:20:46,309 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:46] "GET /socket.io/?EIO=4&transport=polling&t=Px1MqjY&sid=_H1NSvTnlkxBiIPtAAAK HTTP/1.1" 200 -
+2026-06-13 16:20:57,006 [INFO] [LOGIN_OK] Login success: 'carol' from 127.0.0.1 — session db91a3bd…
+2026-06-13 16:20:57,007 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:57] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 16:20:57,019 [INFO] 127.0.0.1 - - [13/Jun/2026 16:20:57] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:21:01,985 [INFO] [LOGIN_OK] Login success: 'bob' from 127.0.0.1 — session 5be5b5de…
+2026-06-13 16:21:01,986 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:01] "POST /api/login HTTP/1.1" 200 -
+2026-06-13 16:21:01,998 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:01] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:21:04,951 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:04] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:21:04,952 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:04] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:21:04,988 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:04] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:21:14,808 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:14] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:21:14,810 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:14] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:21:14,863 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:14] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:21:17,871 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:17] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:21:17,873 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:17] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 16:21:17,927 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:17] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 16:21:18,753 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:18] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:21:18,754 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:18] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:21:18,808 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:18] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:21:30,608 [INFO] [MSG_ENCRYPTED] Encrypted carol→bob [AES-256-GCM | IV:EB7M1tkB… | HMAC:3d552fa8… | nonce:2c5216f3…]
+2026-06-13 16:21:30,608 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:30] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 16:21:30,643 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:30] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:21:30,667 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:30,667 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:30] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:21:32,403 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:32] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:21:32,460 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:32] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:21:32,491 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:32,491 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:32] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:21:35,342 [INFO] [MSG_ENCRYPTED] Encrypted bob→carol [AES-256-GCM | IV:KwSzBnR5… | HMAC:9f08756e… | nonce:742adfbb…]
+2026-06-13 16:21:35,342 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:35] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 16:21:35,377 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:35] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:21:35,401 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:35,448 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:35,448 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:35] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:21:46,670 [INFO] [MSG_ENCRYPTED] Encrypted carol→bob [AES-256-GCM | IV:FQSPIZMy… | HMAC:9175f6c8… | nonce:c63b520e…]
+2026-06-13 16:21:46,670 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:46] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 16:21:46,702 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:46] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:21:46,725 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:46,775 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:46,823 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:46,824 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:46] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:21:50,783 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:50] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:21:50,837 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:50] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:21:50,868 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:50,917 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:50,964 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:21:50,964 [INFO] 127.0.0.1 - - [13/Jun/2026 16:21:50] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:22:00,949 [INFO] [MSG_ENCRYPTED] Encrypted bob→carol [AES-256-GCM | IV:K5ei2j9X… | HMAC:7ae30620… | nonce:119a6cbc…]
+2026-06-13 16:22:00,949 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:00] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 16:22:00,981 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:00] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:22:01,005 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:01,052 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:01,100 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:01,148 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:01,148 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:01] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:22:05,265 [INFO] [MSG_ENCRYPTED] Encrypted bob→carol [AES-256-GCM | IV:vAn2tWw0… | HMAC:9191bd32… | nonce:c56b8557…]
+2026-06-13 16:22:05,265 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:05] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 16:22:05,299 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:05] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:22:05,323 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:05,370 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:05,417 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:05,465 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:05,512 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:05,512 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:05] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:22:07,192 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:07] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:22:07,248 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:07] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:22:07,279 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:07,329 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:07,376 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:07,423 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:07,470 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:07,470 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:07] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:22:12,173 [INFO] [MSG_ENCRYPTED] Encrypted carol→bob [AES-256-GCM | IV:ThfSLtBJ… | HMAC:17a79442… | nonce:ad26c654…]
+2026-06-13 16:22:12,174 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:12] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 16:22:12,208 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:12] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:22:12,231 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:12,279 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:12,326 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:12,373 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:12,420 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:12,467 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:12,467 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:12] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:22:26,480 [INFO] [MSG_ENCRYPTED] Encrypted carol→bob [AES-256-GCM | IV:up/ah0b8… | HMAC:a65980b1… | nonce:efd8d8f2…]
+2026-06-13 16:22:26,481 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:26] "POST /api/send HTTP/1.1" 200 -
+2026-06-13 16:22:26,512 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:26] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:22:26,536 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:26,584 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:26,631 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:26,678 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:26,725 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:26,773 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:26,820 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:26,820 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:26] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:22:28,470 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:28] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:22:28,526 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:28] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:22:28,556 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:28,605 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:28,652 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:28,699 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:28,747 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:28,794 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:28,842 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:22:28,842 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:28] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:22:32,085 [WARNING] [MITM_ATTEMPT] MITM: intercepted ciphertext carol→bob, flipped bytes [0,5,10]
+2026-06-13 16:22:32,169 [INFO] [MITM_DETECTED] MITM detected and blocked: HMAC verification failed — message integrity compromised
+2026-06-13 16:22:32,169 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:32] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-13 16:22:40,600 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce 'efd8d8f2…' from carol→bob
+2026-06-13 16:22:40,600 [INFO] [REPLAY_DETECTED] Replay blocked: Nonce 'efd8d8f2…' was registered when message was originally sent. Duplicate rejected immediately.
+2026-06-13 16:22:40,600 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:40] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 16:22:48,834 [WARNING] [BRUTE_FORCE] Brute force simulation: 10 common passwords against 'alice'
+2026-06-13 16:22:49,106 [WARNING] [BF_ATTEMPT] BF guess 'password' → 'alice': ✗ fail (269.4ms)
+2026-06-13 16:22:49,338 [WARNING] [BF_ATTEMPT] BF guess '123456' → 'alice': ✗ fail (232.0ms)
+2026-06-13 16:22:49,567 [WARNING] [BF_ATTEMPT] BF guess 'letmein' → 'alice': ✗ fail (228.9ms)
+2026-06-13 16:22:49,797 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' → 'alice': ✗ fail (229.3ms)
+2026-06-13 16:22:50,027 [WARNING] [BF_ATTEMPT] BF guess 'alice' → 'alice': ✗ fail (230.1ms)
+2026-06-13 16:22:50,257 [WARNING] [BF_ATTEMPT] BF guess 'admin' → 'alice': ✗ fail (229.9ms)
+2026-06-13 16:22:50,488 [WARNING] [BF_ATTEMPT] BF guess 'secret' → 'alice': ✗ fail (230.8ms)
+2026-06-13 16:22:50,719 [WARNING] [BF_ATTEMPT] BF guess 'abc123' → 'alice': ✗ fail (230.9ms)
+2026-06-13 16:22:50,949 [WARNING] [BF_ATTEMPT] BF guess 'monkey' → 'alice': ✗ fail (230.4ms)
+2026-06-13 16:22:51,179 [WARNING] [BF_ATTEMPT] BF guess 'dragon' → 'alice': ✗ fail (229.7ms)
+2026-06-13 16:22:51,179 [INFO] [BF_COMPLETE] Brute force done — 10 attempts, 2344.7ms total, ~4.27 guesses/sec (bcrypt)
+2026-06-13 16:22:51,179 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:51] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 16:22:54,793 [WARNING] [MITM_ATTEMPT] MITM: intercepted ciphertext carol→bob, flipped bytes [0,5,10]
+2026-06-13 16:22:54,875 [INFO] [MITM_DETECTED] MITM detected and blocked: HMAC verification failed — message integrity compromised
+2026-06-13 16:22:54,875 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:54] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-13 16:22:56,038 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce 'efd8d8f2…' from carol→bob
+2026-06-13 16:22:56,038 [INFO] [REPLAY_DETECTED] Replay blocked: Nonce 'efd8d8f2…' was registered when message was originally sent. Duplicate rejected immediately.
+2026-06-13 16:22:56,039 [INFO] 127.0.0.1 - - [13/Jun/2026 16:22:56] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 16:22:57,940 [WARNING] [BRUTE_FORCE] Brute force simulation: 10 common passwords against 'alice'
+2026-06-13 16:22:58,210 [WARNING] [BF_ATTEMPT] BF guess 'password' → 'alice': ✗ fail (268.9ms)
+2026-06-13 16:22:58,439 [WARNING] [BF_ATTEMPT] BF guess '123456' → 'alice': ✗ fail (229.1ms)
+2026-06-13 16:22:58,669 [WARNING] [BF_ATTEMPT] BF guess 'letmein' → 'alice': ✗ fail (230.5ms)
+2026-06-13 16:22:58,900 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' → 'alice': ✗ fail (230.8ms)
+2026-06-13 16:22:59,132 [WARNING] [BF_ATTEMPT] BF guess 'alice' → 'alice': ✗ fail (231.6ms)
+2026-06-13 16:22:59,363 [WARNING] [BF_ATTEMPT] BF guess 'admin' → 'alice': ✗ fail (230.7ms)
+2026-06-13 16:22:59,594 [WARNING] [BF_ATTEMPT] BF guess 'secret' → 'alice': ✗ fail (231.1ms)
+2026-06-13 16:22:59,825 [WARNING] [BF_ATTEMPT] BF guess 'abc123' → 'alice': ✗ fail (230.6ms)
+2026-06-13 16:23:00,056 [WARNING] [BF_ATTEMPT] BF guess 'monkey' → 'alice': ✗ fail (231.3ms)
+2026-06-13 16:23:00,287 [WARNING] [BF_ATTEMPT] BF guess 'dragon' → 'alice': ✗ fail (230.6ms)
+2026-06-13 16:23:00,287 [INFO] [BF_COMPLETE] Brute force done — 10 attempts, 2346.4ms total, ~4.26 guesses/sec (bcrypt)
+2026-06-13 16:23:00,287 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:00] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-13 16:23:01,007 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce 'efd8d8f2…' from carol→bob
+2026-06-13 16:23:01,007 [INFO] [REPLAY_DETECTED] Replay blocked: Nonce 'efd8d8f2…' was registered when message was originally sent. Duplicate rejected immediately.
+2026-06-13 16:23:01,007 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:01] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-13 16:23:02,556 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:02] "GET /api/logs HTTP/1.1" 200 -
+2026-06-13 16:23:07,361 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:07] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:23:10,432 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:10] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:23:30,039 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:30] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:23:35,285 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:35] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:35,287 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:35] "GET /api/messages/dave HTTP/1.1" 200 -
+2026-06-13 16:23:35,341 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:35] "GET /api/crypto-info/dave HTTP/1.1" 200 -
+2026-06-13 16:23:36,035 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:36] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:36,091 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:36] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 16:23:36,122 [INFO] [MSG_DECRYPTED] Decrypted alice→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:36,122 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:36] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 16:23:38,717 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:38] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:38,772 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:38] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 16:23:38,803 [INFO] [MSG_DECRYPTED] Decrypted alice→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:38,804 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:38] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 16:23:40,482 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:40] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:40,537 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:40] "GET /api/crypto-info/carol HTTP/1.1" 200 -
+2026-06-13 16:23:40,569 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:40,618 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:40,665 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:40,712 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:40,760 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:40,807 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:40,855 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:40,855 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:40] "GET /api/messages/carol HTTP/1.1" 200 -
+2026-06-13 16:23:44,155 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:44] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:44,210 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:44] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:23:44,242 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:44,291 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:44,339 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:44,386 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:44,434 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:44,481 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:44,529 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:44,529 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:44] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:23:45,139 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:45] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:45,140 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:45] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 16:23:45,194 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:45] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 16:23:46,792 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:46] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:46,794 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:46] "GET /api/messages/dave HTTP/1.1" 200 -
+2026-06-13 16:23:46,845 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:46] "GET /api/crypto-info/dave HTTP/1.1" 200 -
+2026-06-13 16:23:47,739 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:47] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:47,795 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:47] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:23:47,828 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:47,877 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:47,925 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:47,973 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:48,020 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:48,068 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:48,115 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:48,115 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:48] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:23:48,238 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:48] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:48,240 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:48] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-13 16:23:48,282 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:48] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-13 16:23:49,214 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:49] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:49,216 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:49] "GET /api/messages/dave HTTP/1.1" 200 -
+2026-06-13 16:23:49,269 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:49] "GET /api/crypto-info/dave HTTP/1.1" 200 -
+2026-06-13 16:23:50,437 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:50] "GET /api/users HTTP/1.1" 200 -
+2026-06-13 16:23:50,496 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:50] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-13 16:23:50,524 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:50,573 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:50,620 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:50,667 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:50,715 [INFO] [MSG_DECRYPTED] Decrypted bob→carol [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:50,762 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:50,810 [INFO] [MSG_DECRYPTED] Decrypted carol→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-13 16:23:50,810 [INFO] 127.0.0.1 - - [13/Jun/2026 16:23:50] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-13 16:24:27,089 [INFO] 127.0.0.1 - - [13/Jun/2026 16:24:27] "GET /socket.io/?EIO=4&transport=websocket&sid=iuTsM7rPTlMd_OWQAAAG HTTP/1.1" 200 -
+2026-06-13 16:24:27,880 [INFO] 127.0.0.1 - - [13/Jun/2026 16:24:27] "GET /socket.io/?EIO=4&transport=polling&t=Px1NgpU HTTP/1.1" 200 -
+2026-06-13 16:24:27,892 [INFO] 127.0.0.1 - - [13/Jun/2026 16:24:27] "POST /socket.io/?EIO=4&transport=polling&t=Px1Ngpn&sid=MFWQe1Gm4XYt5r_QAAAM HTTP/1.1" 200 -
+2026-06-13 16:24:27,894 [INFO] 127.0.0.1 - - [13/Jun/2026 16:24:27] "GET /socket.io/?EIO=4&transport=polling&t=Px1Ngpo&sid=MFWQe1Gm4XYt5r_QAAAM HTTP/1.1" 200 -
+2026-06-13 18:19:31,953 [INFO] 127.0.0.1 - - [13/Jun/2026 18:19:31] "GET /socket.io/?EIO=4&transport=websocket&sid=_H1NSvTnlkxBiIPtAAAK HTTP/1.1" 200 -
+2026-06-13 18:25:53,313 [INFO] 127.0.0.1 - - [13/Jun/2026 18:25:53] "GET /socket.io/?EIO=4&transport=polling&t=Px1pTTz HTTP/1.1" 200 -
+2026-06-13 18:25:53,333 [INFO] 127.0.0.1 - - [13/Jun/2026 18:25:53] "POST /socket.io/?EIO=4&transport=polling&t=Px1pTUf&sid=H0Qa4Jgsv5IrByWYAAAO HTTP/1.1" 200 -
+2026-06-13 18:25:53,338 [INFO] 127.0.0.1 - - [13/Jun/2026 18:25:53] "GET /socket.io/?EIO=4&transport=polling&t=Px1pTUk&sid=H0Qa4Jgsv5IrByWYAAAO HTTP/1.1" 200 -
+2026-06-13 18:25:53,346 [INFO] 127.0.0.1 - - [13/Jun/2026 18:25:53] "GET /socket.io/?EIO=4&transport=polling&t=Px1pTU-&sid=H0Qa4Jgsv5IrByWYAAAO HTTP/1.1" 200 -
+2026-06-13 18:27:42,051 [INFO] 127.0.0.1 - - [13/Jun/2026 18:27:42] "GET /socket.io/?EIO=4&transport=websocket&sid=H0Qa4Jgsv5IrByWYAAAO HTTP/1.1" 200 -
+2026-06-13 19:00:49,523 [INFO] 127.0.0.1 - - [13/Jun/2026 19:00:49] "GET /socket.io/?EIO=4&transport=websocket&sid=MFWQe1Gm4XYt5r_QAAAM HTTP/1.1" 200 -
+2026-06-18 12:11:29,840 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-18 12:11:30,001 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-18 12:11:30,001 [INFO] [33mPress CTRL+C to quit[0m
+2026-06-18 12:11:30,001 [INFO]  * Restarting with stat
+2026-06-18 12:11:31,078 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-18 12:11:31,094 [WARNING]  * Debugger is active!
+2026-06-18 12:11:31,110 [INFO]  * Debugger PIN: 905-747-600
+2026-06-18 12:11:42,920 [INFO] 127.0.0.1 - - [18/Jun/2026 12:11:42] "GET / HTTP/1.1" 200 -
+2026-06-18 12:11:43,060 [INFO] 127.0.0.1 - - [18/Jun/2026 12:11:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-18 12:11:43,061 [INFO] 127.0.0.1 - - [18/Jun/2026 12:11:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-18 12:11:43,067 [INFO] 127.0.0.1 - - [18/Jun/2026 12:11:43] "GET /socket.io/?EIO=4&transport=polling&t=PxQDnDP HTTP/1.1" 200 -
+2026-06-18 12:11:43,119 [INFO] 127.0.0.1 - - [18/Jun/2026 12:11:43] "POST /socket.io/?EIO=4&transport=polling&t=PxQDnEC&sid=TCIeGdAkNraEk0KxAAAA HTTP/1.1" 200 -
+2026-06-18 12:11:43,121 [INFO] 127.0.0.1 - - [18/Jun/2026 12:11:43] "GET /socket.io/?EIO=4&transport=polling&t=PxQDnED&sid=TCIeGdAkNraEk0KxAAAA HTTP/1.1" 200 -
+2026-06-18 12:11:43,404 [INFO] 127.0.0.1 - - [18/Jun/2026 12:11:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-18 12:11:43,405 [INFO] 127.0.0.1 - - [18/Jun/2026 12:11:43] "GET /socket.io/?EIO=4&transport=polling&t=PxQDnEK&sid=TCIeGdAkNraEk0KxAAAA HTTP/1.1" 200 -
+2026-06-18 12:12:33,959 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:33] "GET / HTTP/1.1" 200 -
+2026-06-18 12:12:34,029 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:34] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-18 12:12:34,029 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:34] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-06-18 12:12:34,123 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:34] "GET /socket.io/?EIO=4&transport=polling&t=PxQDzh8 HTTP/1.1" 200 -
+2026-06-18 12:12:34,172 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:34] "POST /socket.io/?EIO=4&transport=polling&t=PxQDzhv&sid=gvZ4GVHY1itR2zenAAAC HTTP/1.1" 200 -
+2026-06-18 12:12:34,173 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:34] "GET /socket.io/?EIO=4&transport=polling&t=PxQDzhw&sid=gvZ4GVHY1itR2zenAAAC HTTP/1.1" 200 -
+2026-06-18 12:12:34,541 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:34] "GET /socket.io/?EIO=4&transport=polling&t=PxQDzh_&sid=gvZ4GVHY1itR2zenAAAC HTTP/1.1" 200 -
+2026-06-18 12:12:47,185 [INFO] [LOGIN_OK] Login success: 'bob' from 127.0.0.1 — session a070b975…
+2026-06-18 12:12:47,186 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:47] "POST /api/login HTTP/1.1" 200 -
+2026-06-18 12:12:47,191 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:47] "GET /api/users HTTP/1.1" 200 -
+2026-06-18 12:12:59,178 [INFO] [LOGIN_OK] Login success: 'alice' from 127.0.0.1 — session d4abc61c…
+2026-06-18 12:12:59,180 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:59] "POST /api/login HTTP/1.1" 200 -
+2026-06-18 12:12:59,192 [INFO] 127.0.0.1 - - [18/Jun/2026 12:12:59] "GET /api/users HTTP/1.1" 200 -
+2026-06-18 12:13:07,316 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:07] "GET /api/users HTTP/1.1" 200 -
+2026-06-18 12:13:07,317 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:07] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-18 12:13:07,370 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:07] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-18 12:13:33,262 [INFO] [MSG_ENCRYPTED] Encrypted alice→bob [AES-256-GCM | IV:6Uod46Q6… | HMAC:7dd0aa3e… | nonce:03a08f2f…]
+2026-06-18 12:13:33,263 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:33] "POST /api/send HTTP/1.1" 200 -
+2026-06-18 12:13:33,334 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:33] "GET /api/crypto-info/bob HTTP/1.1" 200 -
+2026-06-18 12:13:33,358 [INFO] [MSG_DECRYPTED] Decrypted alice→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-18 12:13:33,358 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:33] "GET /api/messages/bob HTTP/1.1" 200 -
+2026-06-18 12:13:41,466 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:41] "GET /api/users HTTP/1.1" 200 -
+2026-06-18 12:13:41,499 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:41] "GET /api/crypto-info/alice HTTP/1.1" 200 -
+2026-06-18 12:13:41,531 [INFO] [MSG_DECRYPTED] Decrypted alice→bob [HMAC ✓ | AES-GCM ✓]
+2026-06-18 12:13:41,531 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:41] "GET /api/messages/alice HTTP/1.1" 200 -
+2026-06-18 12:13:48,298 [WARNING] [MITM_ATTEMPT] MITM: intercepted ciphertext alice→bob, flipped bytes [0,5,10]
+2026-06-18 12:13:48,384 [INFO] [MITM_DETECTED] MITM detected and blocked: HMAC verification failed — message integrity compromised
+2026-06-18 12:13:48,384 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:48] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-18 12:13:52,394 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce '03a08f2f…' from alice→bob
+2026-06-18 12:13:52,394 [INFO] [REPLAY_DETECTED] Replay blocked: Nonce '03a08f2f…' was registered when message was originally sent. Duplicate rejected immediately.
+2026-06-18 12:13:52,395 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:52] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-18 12:13:55,616 [WARNING] [BRUTE_FORCE] Brute force simulation: 10 common passwords against 'alice'
+2026-06-18 12:13:55,886 [WARNING] [BF_ATTEMPT] BF guess 'password' → 'alice': ✗ fail (269.1ms)
+2026-06-18 12:13:56,119 [WARNING] [BF_ATTEMPT] BF guess '123456' → 'alice': ✗ fail (232.3ms)
+2026-06-18 12:13:56,349 [WARNING] [BF_ATTEMPT] BF guess 'letmein' → 'alice': ✗ fail (229.3ms)
+2026-06-18 12:13:56,578 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' → 'alice': ✗ fail (228.9ms)
+2026-06-18 12:13:56,807 [WARNING] [BF_ATTEMPT] BF guess 'alice' → 'alice': ✗ fail (228.9ms)
+2026-06-18 12:13:57,036 [WARNING] [BF_ATTEMPT] BF guess 'admin' → 'alice': ✗ fail (229.0ms)
+2026-06-18 12:13:57,264 [WARNING] [BF_ATTEMPT] BF guess 'secret' → 'alice': ✗ fail (228.8ms)
+2026-06-18 12:13:57,493 [WARNING] [BF_ATTEMPT] BF guess 'abc123' → 'alice': ✗ fail (228.8ms)
+2026-06-18 12:13:57,722 [WARNING] [BF_ATTEMPT] BF guess 'monkey' → 'alice': ✗ fail (228.9ms)
+2026-06-18 12:13:57,952 [WARNING] [BF_ATTEMPT] BF guess 'dragon' → 'alice': ✗ fail (229.5ms)
+2026-06-18 12:13:57,952 [INFO] [BF_COMPLETE] Brute force done — 10 attempts, 2335.6ms total, ~4.29 guesses/sec (bcrypt)
+2026-06-18 12:13:57,952 [INFO] 127.0.0.1 - - [18/Jun/2026 12:13:57] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-18 12:14:00,681 [INFO] 127.0.0.1 - - [18/Jun/2026 12:14:00] "GET /api/logs HTTP/1.1" 200 -
+2026-06-18 12:14:07,222 [WARNING] [REPLAY_ATTEMPT] Replay attack: re-sending nonce '03a08f2f…' from alice→bob
+2026-06-18 12:14:07,223 [INFO] [REPLAY_DETECTED] Replay blocked: Nonce '03a08f2f…' was registered when message was originally sent. Duplicate rejected immediately.
+2026-06-18 12:14:07,223 [INFO] 127.0.0.1 - - [18/Jun/2026 12:14:07] "POST /api/attack/replay HTTP/1.1" 200 -
+2026-06-18 12:14:08,601 [WARNING] [BRUTE_FORCE] Brute force simulation: 10 common passwords against 'alice'
+2026-06-18 12:14:08,872 [WARNING] [BF_ATTEMPT] BF guess 'password' → 'alice': ✗ fail (269.8ms)
+2026-06-18 12:14:09,106 [WARNING] [BF_ATTEMPT] BF guess '123456' → 'alice': ✗ fail (234.5ms)
+2026-06-18 12:14:09,336 [WARNING] [BF_ATTEMPT] BF guess 'letmein' → 'alice': ✗ fail (229.9ms)
+2026-06-18 12:14:09,566 [WARNING] [BF_ATTEMPT] BF guess 'qwerty' → 'alice': ✗ fail (229.6ms)
+2026-06-18 12:14:09,795 [WARNING] [BF_ATTEMPT] BF guess 'alice' → 'alice': ✗ fail (229.0ms)
+2026-06-18 12:14:10,024 [WARNING] [BF_ATTEMPT] BF guess 'admin' → 'alice': ✗ fail (228.9ms)
+2026-06-18 12:14:10,254 [WARNING] [BF_ATTEMPT] BF guess 'secret' → 'alice': ✗ fail (229.6ms)
+2026-06-18 12:14:10,487 [WARNING] [BF_ATTEMPT] BF guess 'abc123' → 'alice': ✗ fail (232.7ms)
+2026-06-18 12:14:10,718 [WARNING] [BF_ATTEMPT] BF guess 'monkey' → 'alice': ✗ fail (231.2ms)
+2026-06-18 12:14:10,948 [WARNING] [BF_ATTEMPT] BF guess 'dragon' → 'alice': ✗ fail (229.2ms)
+2026-06-18 12:14:10,948 [INFO] [BF_COMPLETE] Brute force done — 10 attempts, 2346.0ms total, ~4.27 guesses/sec (bcrypt)
+2026-06-18 12:14:10,948 [INFO] 127.0.0.1 - - [18/Jun/2026 12:14:10] "POST /api/attack/bruteforce HTTP/1.1" 200 -
+2026-06-18 12:14:12,287 [WARNING] [MITM_ATTEMPT] MITM: intercepted ciphertext alice→bob, flipped bytes [0,5,10]
+2026-06-18 12:14:12,374 [INFO] [MITM_DETECTED] MITM detected and blocked: HMAC verification failed — message integrity compromised
+2026-06-18 12:14:12,374 [INFO] 127.0.0.1 - - [18/Jun/2026 12:14:12] "POST /api/attack/mitm HTTP/1.1" 200 -
+2026-06-18 12:15:01,460 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:01] "GET / HTTP/1.1" 200 -
+2026-06-18 12:15:01,473 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:01] "GET /socket.io/?EIO=4&transport=websocket&sid=gvZ4GVHY1itR2zenAAAC HTTP/1.1" 200 -
+2026-06-18 12:15:01,499 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-18 12:15:01,501 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-06-18 12:15:01,505 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:01] "GET /socket.io/?EIO=4&transport=polling&t=PxQEXg0 HTTP/1.1" 200 -
+2026-06-18 12:15:01,515 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:01] "POST /socket.io/?EIO=4&transport=polling&t=PxQEXg6&sid=H5YI39Uckutg9HToAAAE HTTP/1.1" 200 -
+2026-06-18 12:15:01,515 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:01] "GET /socket.io/?EIO=4&transport=polling&t=PxQEXg6.0&sid=H5YI39Uckutg9HToAAAE HTTP/1.1" 200 -
+2026-06-18 12:15:01,521 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:01] "GET /socket.io/?EIO=4&transport=polling&t=PxQEXgG&sid=H5YI39Uckutg9HToAAAE HTTP/1.1" 200 -
+2026-06-18 12:15:14,152 [ERROR] [LOGIN_FAIL] Wrong password for 'bob' from 127.0.0.1 [attempt 1/5, 4 remaining]
+2026-06-18 12:15:14,153 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:14] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+2026-06-18 12:15:18,172 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:18] "GET /socket.io/?EIO=4&transport=websocket&sid=H5YI39Uckutg9HToAAAE HTTP/1.1" 200 -
+2026-06-18 12:15:19,502 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:19] "GET /socket.io/?EIO=4&transport=polling&t=PxQEc3C HTTP/1.1" 200 -
+2026-06-18 12:15:19,541 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:19] "POST /socket.io/?EIO=4&transport=polling&t=PxQEc3o&sid=Sxk4xlVEwM4xccizAAAG HTTP/1.1" 200 -
+2026-06-18 12:15:19,544 [INFO] 127.0.0.1 - - [18/Jun/2026 12:15:19] "GET /socket.io/?EIO=4&transport=polling&t=PxQEc3o.0&sid=Sxk4xlVEwM4xccizAAAG HTTP/1.1" 200 -
+2026-06-24 09:20:14,410 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-24 09:20:14,501 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-24 09:20:14,501 [INFO] [33mPress CTRL+C to quit[0m
+2026-06-24 09:20:14,501 [INFO]  * Restarting with watchdog (fsevents)
+2026-06-24 09:20:15,616 [INFO] [STARTUP] SecureChat ready — AES-256-GCM | HMAC-SHA256 | bcrypt(12) | nonce replay protection | account lockout
+2026-06-24 09:20:15,633 [WARNING]  * Debugger is active!
+2026-06-24 09:20:15,647 [INFO]  * Debugger PIN: 255-379-174
+2026-06-24 09:20:20,358 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:20] "GET / HTTP/1.1" 200 -
+2026-06-24 09:20:20,413 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:20] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-24 09:20:20,414 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:20] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-06-24 09:20:20,432 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:20] "GET /socket.io/?EIO=4&transport=polling&t=PxuW5JD HTTP/1.1" 200 -
+2026-06-24 09:20:20,588 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:20] "POST /socket.io/?EIO=4&transport=polling&t=PxuW5LR&sid=eRB_w1ZFQbCtlltcAAAA HTTP/1.1" 200 -
+2026-06-24 09:20:20,597 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:20] "GET /socket.io/?EIO=4&transport=polling&t=PxuW5LS&sid=eRB_w1ZFQbCtlltcAAAA HTTP/1.1" 200 -
+2026-06-24 09:20:20,602 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-24 09:20:20,605 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:20] "GET /socket.io/?EIO=4&transport=polling&t=PxuW5Lu&sid=eRB_w1ZFQbCtlltcAAAA HTTP/1.1" 200 -
+2026-06-24 09:20:25,639 [INFO] 127.0.0.1 - - [24/Jun/2026 09:20:25] "GET /socket.io/?EIO=4&transport=websocket&sid=eRB_w1ZFQbCtlltcAAAA HTTP/1.1" 200 -

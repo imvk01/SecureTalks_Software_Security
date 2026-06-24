@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SecureChat — AES-256-GCM Messaging</title>
+<link rel="stylesheet" href="/static/css/style.css"/>
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+
+<!-- AUTH OVERLAY -->
+<div class="overlay" id="auth-overlay">
+  <div class="modal">
+    <div class="modal-logo">🔐</div>
+    <h2 id="modal-title">Sign In</h2>
+    <p class="modal-sub">End-to-end encrypted messaging</p>
+    <div class="err-msg" id="auth-err" style="display:none"></div>
+    <div class="ok-msg" id="auth-ok" style="display:none"></div>
+    <div class="field" id="field-name" style="display:none">
+      <label>Display Name</label>
+      <input id="inp-name" type="text" placeholder="Your name"/>
+    </div>
+    <div class="field">
+      <label>Username</label>
+      <input id="inp-user" type="text" placeholder="username" autocomplete="username"/>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input id="inp-pass" type="password" placeholder="••••••••" autocomplete="current-password"/>
+    </div>
+    <button class="btn-primary" id="auth-submit">Sign In</button>
+    <button class="btn-link" id="auth-toggle">No account? Register</button>
+    <div class="demo-hint">
+      <strong>Demo accounts:</strong> alice/alice123 &nbsp;·&nbsp; bob/bob456 &nbsp;·&nbsp; carol/carol789
+    </div>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div class="app" id="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-row">
+        <span class="logo-icon">🔒</span>
+        <span class="logo-text">SecureChat</span>
+      </div>
+      <div class="session-info">
+        <span>Logged in as</span>
+        <strong id="logged-as">—</strong>
+      </div>
+    </div>
+    <div class="sidebar-section-label">Contacts</div>
+    <div class="contact-list" id="contact-list"></div>
+    <div class="sidebar-footer">
+      <button id="logout-btn" class="logout-btn">⬡ Sign out</button>
+    </div>
+  </aside>
+
+  <!-- CHAT AREA -->
+  <main class="chat-area">
+    <div class="chat-header" id="chat-header">
+      <div class="chat-avatar" id="ch-av">?</div>
+      <div class="chat-title-block">
+        <div class="chat-name" id="ch-name">Select a contact</div>
+        <div class="chat-sub">AES-256-GCM · HMAC-SHA256 · bcrypt</div>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-green">AES-256-GCM</span>
+        <span class="badge badge-blue">HMAC-SHA256</span>
+        <span class="badge badge-purple">bcrypt</span>
+      </div>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">💬</div>
+        <div>Select a contact to start a secure conversation</div>
+      </div>
+    </div>
+
+    <div class="input-bar">
+      <input class="msg-input" id="msg-input" placeholder="Type a message… (encrypted with AES-256-GCM before sending)"/>
+      <button class="send-btn" id="send-btn">Send ➤</button>
+    </div>
+  </main>
+
+  <!-- RIGHT PANEL -->
+  <aside class="right-panel">
+    <div class="panel-tabs">
+      <button class="tab active" data-tab="crypto" onclick="switchTab('crypto')">🔐 Crypto</button>
+      <button class="tab" data-tab="attacks" onclick="switchTab('attacks')">⚡ Attacks</button>
+      <button class="tab" data-tab="logs" onclick="switchTab('logs')">📋 Logs</button>
+    </div>
+    <div class="panel-body" id="panel-body">
+      <div class="crypto-idle">Select a contact to see live crypto details</div>
+    </div>
+  </aside>
+
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
